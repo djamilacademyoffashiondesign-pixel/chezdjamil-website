@@ -38,6 +38,11 @@ html[lang="fr"] [data-lang="fr"],
 html:not([lang="en"]) [data-lang="fr"]{display:inline;}
 html[lang="en"] [data-lang="en"]{display:inline;}
 html[lang="en"] [data-lang="fr"]{display:none;}
+html[lang="fr"] [data-lang="fr"][data-block],
+html:not([lang="en"]) [data-lang="fr"][data-block]{display:block;}
+html[lang="en"] [data-lang="en"][data-block]{display:block;}
+html[lang="en"] [data-lang="fr"][data-block]{display:none;}
+html:not([lang="en"]) [data-lang="en"][data-block]{display:none;}
 
 :root {
   --noir: #0e0d0b;
@@ -443,7 +448,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
     </div>
     <div class="stat-item">
       <div class="stat-number">ITC</div>
-      <div class="stat-label">Certified Partner</div>
+      <div class="stat-label"><span data-lang="fr">Partenaire certifié</span><span data-lang="en">Certified Partner</span></div>
     </div>
   </div>
 </section>
@@ -474,22 +479,22 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
     <p class="sec-intro"><span data-lang="fr">Institution vocationnelle agréée en Gambie (Rég. 2023/C22040), formant les jeunes aux métiers de la mode avec une approche pratique et inclusive.</span><span data-lang="en">Registered vocational institution in The Gambia (Reg. 2023/C22040), training youth in fashion crafts with a practical and inclusive approach.</span></p>
     <div class="modules-grid">
       <div class="module-card"><span class="module-icon">✂️</span><div class="module-name"><span data-lang="fr">Coupe & Patron</span><span data-lang="en">Pattern Making</span></div><div class="module-desc"><span data-lang="fr">Techniques de base de coupe et modélisme</span><span data-lang="en">Pattern drafting & modelling</span></div></div>
-      <div class="module-card"><span class="module-icon">🪡</span><div class="module-name"><span data-lang="fr">Broderie Digitale</span><span data-lang="en">Digital Embroidery</span></div><div class="module-desc">Machine HMPC, software & digitisation</div></div>
-      <div class="module-card"><span class="module-icon">👗</span><div class="module-name"><span data-lang="fr">Création</span><span data-lang="en">Garment Making</span></div><div class="module-desc">Dresses, boubou, kaftan, wax fabric</div></div>
-      <div class="module-card"><span class="module-icon">💼</span><div class="module-name"><span data-lang="fr">Entrepreneuriat</span><span data-lang="en">Entrepreneurship</span></div><div class="module-desc">Starting & managing a small business</div></div>
+      <div class="module-card"><span class="module-icon">🪡</span><div class="module-name"><span data-lang="fr">Broderie Digitale</span><span data-lang="en">Digital Embroidery</span></div><div class="module-desc"><span data-lang="fr">Machine HMPC, logiciel et digitalisation</span><span data-lang="en">Machine HMPC, software & digitisation</span></div></div>
+      <div class="module-card"><span class="module-icon">👗</span><div class="module-name"><span data-lang="fr">Création</span><span data-lang="en">Garment Making</span></div><div class="module-desc"><span data-lang="fr">Robes, boubou, kaftan, tissu wax</span><span data-lang="en">Dresses, boubou, kaftan, wax fabric</span></div></div>
+      <div class="module-card"><span class="module-icon">💼</span><div class="module-name"><span data-lang="fr">Entrepreneuriat</span><span data-lang="en">Entrepreneurship</span></div><div class="module-desc"><span data-lang="fr">Créer et gérer une petite entreprise</span><span data-lang="en">Starting & managing a small business</span></div></div>
     </div>
   </div>
   <div class="fade-in" style="transition-delay:0.15s;">
     <div class="academie-card">
-      <div class="ac-title">Digital Embroidery Programme</div>
-      <div class="ac-sub">Projet YEP · ITC The Gambia</div>
+      <div class="ac-title"><span data-lang="fr">Programme de broderie digitale</span><span data-lang="en">Digital Embroidery Programme</span></div>
+      <div class="ac-sub"><span data-lang="fr">Projet YEP · ITC Gambie</span><span data-lang="en">YEP Project · ITC The Gambia</span></div>
       <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;"><span data-lang="fr">Formation intensive de 6 mois en broderie digitale pour 8 jeunes gambiens, alignée sur les besoins du tourisme et des industries créatives.</span><span data-lang="en">6-month intensive digital embroidery training for 8 Gambian youth, aligned with the needs of the tourism and creative industries.</span></p>
       <div class="ac-stats">
         <div><div class="ac-stat-val">6</div><div class="ac-stat-lab"><span data-lang="fr">Mois</span><span data-lang="en">Months</span></div></div>
         <div><div class="ac-stat-val">8</div><div class="ac-stat-lab">Participants</div></div>
-        <div><div class="ac-stat-val">50%</div><div class="ac-stat-lab">Employment target</div></div>
+        <div><div class="ac-stat-val">50%</div><div class="ac-stat-lab"><span data-lang="fr">Objectif d'insertion</span><span data-lang="en">Employment target</span></div></div>
       </div>
-      <div class="cert-badge">Technical Certificate Awarded</div>
+      <div class="cert-badge"><span data-lang="fr">Certificat technique délivré</span><span data-lang="en">Technical Certificate Awarded</span></div>
     </div>
     <div style="margin-top:2px;overflow:hidden;height:180px;">
       <img loading="lazy" decoding="async" src="photo-05.webp" alt="Élèves Djamil Academy" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
@@ -506,7 +511,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <!-- ÉLÈVES -->
 <section class="eleves" id="eleves">
   <div class="eyebrow eyebrow-center fade-in"><span data-lang="fr">Notre communauté</span><span data-lang="en">Our Community</span></div>
-  <h2 class="sec-title fade-in" style="text-align:center;">Nos <em style="color:var(--wax-bleu);"><span data-lang="fr">Élèves</span><span data-lang="en">Students</span></em></h2>
+  <h2 class="sec-title fade-in" style="text-align:center;"><span data-lang="fr">Nos</span><span data-lang="en">Our</span> <em style="color:var(--wax-bleu);"><span data-lang="fr">Élèves</span><span data-lang="en">Students</span></em></h2>
   <p class="sec-intro fade-in eleves-intro"><span data-lang="fr">Des jeunes talents de toute la Gambie qui apprennent, créent et construisent leur avenir dans la mode.</span><span data-lang="en">Young talents from across The Gambia learning, creating and building their future in fashion.</span></p>
 
   <div class="eleves-grid fade-in">
@@ -516,8 +521,8 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <img loading="lazy" decoding="async" src="photo-05.webp" alt="Élèves DAFD" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
       </div>
       <div class="eleve-info">
-        <div class="eleve-name">Élève 1</div>
-        <div class="eleve-level">⭐ Advanced level</div>
+        <div class="eleve-name"><span data-lang="fr">Élève 1</span><span data-lang="en">Student 1</span></div>
+        <div class="eleve-level"><span data-lang="fr">⭐ Niveau avancé</span><span data-lang="en">⭐ Advanced level</span></div>
         <div class="eleve-spec"><span data-lang="fr">Coupe & Patron</span><span data-lang="en">Pattern Making</span></div>
       </div>
     </div>
@@ -526,9 +531,9 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <img loading="lazy" decoding="async" src="photo-06.webp" alt="Cours DAFD" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="eleve-info">
-        <div class="eleve-name">Élève 2</div>
-        <div class="eleve-level">⭐ Intermediate level</div>
-        <div class="eleve-spec">Broderie digitale</div>
+        <div class="eleve-name"><span data-lang="fr">Élève 2</span><span data-lang="en">Student 2</span></div>
+        <div class="eleve-level"><span data-lang="fr">⭐ Niveau intermédiaire</span><span data-lang="en">⭐ Intermediate level</span></div>
+        <div class="eleve-spec"><span data-lang="fr">Broderie digitale</span><span data-lang="en">Digital embroidery</span></div>
       </div>
     </div>
     <div class="eleve-card">
@@ -536,9 +541,9 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <img loading="lazy" decoding="async" src="photo-07.webp" alt="Formation DAFD" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="eleve-info">
-        <div class="eleve-name">Élève 3</div>
-        <div class="eleve-level">⭐ Beginner level</div>
-        <div class="eleve-spec">Confection wax</div>
+        <div class="eleve-name"><span data-lang="fr">Élève 3</span><span data-lang="en">Student 3</span></div>
+        <div class="eleve-level"><span data-lang="fr">⭐ Niveau débutant</span><span data-lang="en">⭐ Beginner level</span></div>
+        <div class="eleve-spec"><span data-lang="fr">Confection wax</span><span data-lang="en">Wax tailoring</span></div>
       </div>
     </div>
     <div class="eleve-card">
@@ -546,9 +551,9 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <img loading="lazy" decoding="async" src="photo-08.webp" alt="Machine broderie DAFD" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="eleve-info">
-        <div class="eleve-name">Élève 4</div>
-        <div class="eleve-level">⭐ Advanced level</div>
-        <div class="eleve-spec">Boubou & kaftan</div>
+        <div class="eleve-name"><span data-lang="fr">Élève 4</span><span data-lang="en">Student 4</span></div>
+        <div class="eleve-level"><span data-lang="fr">⭐ Niveau avancé</span><span data-lang="en">⭐ Advanced level</span></div>
+        <div class="eleve-spec"><span data-lang="fr">Boubou & kaftan</span><span data-lang="en">Boubou &amp; kaftan</span></div>
       </div>
     </div>
     <div class="eleve-card">
@@ -556,8 +561,8 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <img loading="lazy" decoding="async" src="photo-09.webp" alt="Formation DAFD" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="eleve-info">
-        <div class="eleve-name">Élève 5</div>
-        <div class="eleve-level">⭐ Intermediate level</div>
+        <div class="eleve-name"><span data-lang="fr">Élève 5</span><span data-lang="en">Student 5</span></div>
+        <div class="eleve-level"><span data-lang="fr">⭐ Niveau intermédiaire</span><span data-lang="en">⭐ Intermediate level</span></div>
         <div class="eleve-spec"><span data-lang="fr">Coupe & Patron</span><span data-lang="en">Pattern Making</span></div>
       </div>
     </div>
@@ -566,9 +571,9 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <img loading="lazy" decoding="async" src="photo-10.webp" alt="DAFD" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="eleve-info">
-        <div class="eleve-name">Élève 6</div>
-        <div class="eleve-level">⭐ Beginner level</div>
-        <div class="eleve-spec">Broderie digitale</div>
+        <div class="eleve-name"><span data-lang="fr">Élève 6</span><span data-lang="en">Student 6</span></div>
+        <div class="eleve-level"><span data-lang="fr">⭐ Niveau débutant</span><span data-lang="en">⭐ Beginner level</span></div>
+        <div class="eleve-spec"><span data-lang="fr">Broderie digitale</span><span data-lang="en">Digital embroidery</span></div>
       </div>
     </div>
     <div class="eleve-card">
@@ -576,9 +581,9 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <img loading="lazy" decoding="async" src="photo-11.webp" alt="DAFD" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="eleve-info">
-        <div class="eleve-name">Élève 7</div>
-        <div class="eleve-level">⭐ Advanced level</div>
-        <div class="eleve-spec">Confection wax</div>
+        <div class="eleve-name"><span data-lang="fr">Élève 7</span><span data-lang="en">Student 7</span></div>
+        <div class="eleve-level"><span data-lang="fr">⭐ Niveau avancé</span><span data-lang="en">⭐ Advanced level</span></div>
+        <div class="eleve-spec"><span data-lang="fr">Confection wax</span><span data-lang="en">Wax tailoring</span></div>
       </div>
     </div>
     <div class="eleve-card">
@@ -586,9 +591,9 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <img loading="lazy" decoding="async" src="photo-03.webp" alt="Logo DAFD" style="width:100%;height:100%;object-fit:contain;padding:20px;background:#f5f0e8;">
       </div>
       <div class="eleve-info">
-        <div class="eleve-name">Élève 8</div>
-        <div class="eleve-level">⭐ Intermediate level</div>
-        <div class="eleve-spec">Boubou & kaftan</div>
+        <div class="eleve-name"><span data-lang="fr">Élève 8</span><span data-lang="en">Student 8</span></div>
+        <div class="eleve-level"><span data-lang="fr">⭐ Niveau intermédiaire</span><span data-lang="en">⭐ Intermediate level</span></div>
+        <div class="eleve-spec"><span data-lang="fr">Boubou & kaftan</span><span data-lang="en">Boubou &amp; kaftan</span></div>
       </div>
     </div>
   </div>
@@ -605,24 +610,20 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <!-- Coming Soon Banner -->
 <section class="boutique-coming-soon">
   <span class="boutique-coming-soon-icon">🎨</span>
-  <h3>Boutique <em style="color:var(--or);">Coming Soon</em></h3>
+  <h3><span data-lang="fr">Boutique</span><span data-lang="en">Shop</span> <em style="color:var(--or);"><span data-lang="fr">bientôt disponible</span><span data-lang="en">Coming Soon</span></em></h3>
   <p>
-    Our Chez Djamil collection is being carefully handcrafted and will be available for online orders very soon. 
-    <br><br>
-    <em>Notre collection Chez Djamil est en cours de confection avec soin et sera disponible très bientôt.</em>
+    <span data-lang="fr">Notre collection Chez Djamil est confectionnée avec soin et sera bientôt disponible à la commande en ligne.</span><span data-lang="en">Our Chez Djamil collection is being carefully handcrafted and will be available for online orders very soon.</span> 
   </p>
   <p>
-    📧 Interested in pre-orders? Contact us at 
+    <span data-lang="fr">📧 Intéressé par les précommandes ? Écris-nous à</span><span data-lang="en">📧 Interested in pre-orders? Contact us at</span> 
     <span class="cta-email">shop@chezdjamil.com</span>
-    <br>
-    <em>Intéressé par les précommandes ? Écris-nous.</em>
   </p>
 </section>
 
 <section class="boutique coming-soon" id="boutique">
   <div class="boutique-header fade-in">
     <div class="eyebrow eyebrow-center" style="color:var(--or);"><span data-lang="fr">Prêt-à-porter africain</span><span data-lang="en">African Ready-to-Wear</span></div>
-    <h2 class="sec-title sec-title-light" style="text-align:center;">Shop <em>Chez Djamil</em></h2>
+    <h2 class="sec-title sec-title-light" style="text-align:center;"><span data-lang="fr">Boutique</span><span data-lang="en">Shop</span> <em>Chez Djamil</em></h2>
     <p class="sec-intro sec-intro-light" style="text-align:center;margin:0 auto;"><span data-lang="fr">Des vêtements confectionnés avec soin à Bakau, disponibles à la commande en ligne.</span><span data-lang="en">Garments carefully crafted in Bakau, available to order online.</span></p>
   </div>
 
@@ -640,16 +641,16 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       <div class="product-img">
         <div class="product-placeholder" style="background:linear-gradient(135deg,#2a1a0e,#4a2e1a);">
           <span style="font-size:48px;">👗</span>
-          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;">Photo coming soon</span>
+          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span>
         </div>
-        <div class="product-badge new">Nouveau</div>
+        <div class="product-badge new"><span data-lang="fr">Nouveau</span><span data-lang="en">New</span></div>
       </div>
       <div class="product-info">
-        <div class="product-name">Robe Wax Élégance</div>
-        <div class="product-cat">Femme · Tissu wax</div>
+        <div class="product-name"><span data-lang="fr">Robe Wax Élégance</span><span data-lang="en">Wax Élégance Dress</span></div>
+        <div class="product-cat"><span data-lang="fr">Femme · Tissu wax</span><span data-lang="en">Women · Wax fabric</span></div>
         <div class="product-footer">
           <div class="product-price">1 200 <span>D</span></div>
-          <button class="btn-add" onclick="addToCart('Robe Wax Élégance', 1200)">+ Cart</button>
+          <button class="btn-add" onclick="addToCart('Robe Wax Élégance', 1200)"><span data-lang="fr">+ Panier</span><span data-lang="en">+ Cart</span></button>
         </div>
       </div>
     </div>
@@ -658,16 +659,16 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       <div class="product-img">
         <div class="product-placeholder" style="background:linear-gradient(135deg,#0a1a2e,#1e3a5f);">
           <span style="font-size:48px;">👘</span>
-          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;">Photo coming soon</span>
+          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span>
         </div>
-        <div class="product-badge">Best seller</div>
+        <div class="product-badge"><span data-lang="fr">Meilleure vente</span><span data-lang="en">Best seller</span></div>
       </div>
       <div class="product-info">
-        <div class="product-name">Boubou Grand Boubou</div>
-        <div class="product-cat">Homme · Bazin riche</div>
+        <div class="product-name"><span data-lang="fr">Boubou Grand Boubou</span><span data-lang="en">Grand Boubou</span></div>
+        <div class="product-cat"><span data-lang="fr">Homme · Bazin riche</span><span data-lang="en">Men · Rich bazin</span></div>
         <div class="product-footer">
           <div class="product-price">2 500 <span>D</span></div>
-          <button class="btn-add" onclick="addToCart('Boubou Grand Boubou', 2500)">+ Cart</button>
+          <button class="btn-add" onclick="addToCart('Boubou Grand Boubou', 2500)"><span data-lang="fr">+ Panier</span><span data-lang="en">+ Cart</span></button>
         </div>
       </div>
     </div>
@@ -676,16 +677,16 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       <div class="product-img">
         <div class="product-placeholder" style="background:linear-gradient(135deg,#2e0a0a,#5f1e1e);">
           <span style="font-size:48px;">✨</span>
-          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;">Photo coming soon</span>
+          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span>
         </div>
-        <div class="product-badge new">Nouveau</div>
+        <div class="product-badge new"><span data-lang="fr">Nouveau</span><span data-lang="en">New</span></div>
       </div>
       <div class="product-info">
-        <div class="product-name">Tenue de Cérémonie</div>
-        <div class="product-cat">Mixte · Wax brodé</div>
+        <div class="product-name"><span data-lang="fr">Tenue de Cérémonie</span><span data-lang="en">Ceremonial Outfit</span></div>
+        <div class="product-cat"><span data-lang="fr">Mixte · Wax brodé</span><span data-lang="en">Unisex · Embroidered wax</span></div>
         <div class="product-footer">
           <div class="product-price">3 800 <span>D</span></div>
-          <button class="btn-add" onclick="addToCart('Tenue de Cérémonie', 3800)">+ Cart</button>
+          <button class="btn-add" onclick="addToCart('Tenue de Cérémonie', 3800)"><span data-lang="fr">+ Panier</span><span data-lang="en">+ Cart</span></button>
         </div>
       </div>
     </div>
@@ -694,15 +695,15 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       <div class="product-img">
         <div class="product-placeholder" style="background:linear-gradient(135deg,#1a2e0a,#2e5f1e);">
           <span style="font-size:48px;">👚</span>
-          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;">Photo coming soon</span>
+          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span>
         </div>
       </div>
       <div class="product-info">
-        <div class="product-name">Kaftan Femme</div>
-        <div class="product-cat">Femme · Tissu bazin</div>
+        <div class="product-name"><span data-lang="fr">Kaftan Femme</span><span data-lang="en">Women's Kaftan</span></div>
+        <div class="product-cat"><span data-lang="fr">Femme · Tissu bazin</span><span data-lang="en">Women · Bazin fabric</span></div>
         <div class="product-footer">
           <div class="product-price">1 800 <span>D</span></div>
-          <button class="btn-add" onclick="addToCart('Kaftan Femme', 1800)">+ Cart</button>
+          <button class="btn-add" onclick="addToCart('Kaftan Femme', 1800)"><span data-lang="fr">+ Panier</span><span data-lang="en">+ Cart</span></button>
         </div>
       </div>
     </div>
@@ -711,15 +712,15 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       <div class="product-img">
         <div class="product-placeholder" style="background:linear-gradient(135deg,#2e2a0a,#5f551e);">
           <span style="font-size:48px;">🧒</span>
-          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;">Photo coming soon</span>
+          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span>
         </div>
       </div>
       <div class="product-info">
-        <div class="product-name">Ensemble Enfant Wax</div>
-        <div class="product-cat">Enfant · Tissu wax</div>
+        <div class="product-name"><span data-lang="fr">Ensemble Enfant Wax</span><span data-lang="en">Children's Wax Set</span></div>
+        <div class="product-cat"><span data-lang="fr">Enfant · Tissu wax</span><span data-lang="en">Children · Wax fabric</span></div>
         <div class="product-footer">
           <div class="product-price">850 <span>D</span></div>
-          <button class="btn-add" onclick="addToCart('Ensemble Enfant Wax', 850)">+ Cart</button>
+          <button class="btn-add" onclick="addToCart('Ensemble Enfant Wax', 850)"><span data-lang="fr">+ Panier</span><span data-lang="en">+ Cart</span></button>
         </div>
       </div>
     </div>
@@ -728,16 +729,16 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       <div class="product-img">
         <div class="product-placeholder" style="background:linear-gradient(135deg,#1a0a2e,#3a1e5f);">
           <span style="font-size:48px;">👔</span>
-          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;">Photo coming soon</span>
+          <span style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.3);text-transform:uppercase;"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span>
         </div>
-        <div class="product-badge">Best seller</div>
+        <div class="product-badge"><span data-lang="fr">Meilleure vente</span><span data-lang="en">Best seller</span></div>
       </div>
       <div class="product-info">
-        <div class="product-name">Dashiki Brodé</div>
-        <div class="product-cat">Homme · Tissu coton brodé</div>
+        <div class="product-name"><span data-lang="fr">Dashiki Brodé</span><span data-lang="en">Embroidered Dashiki</span></div>
+        <div class="product-cat"><span data-lang="fr">Homme · Tissu coton brodé</span><span data-lang="en">Men · Embroidered cotton</span></div>
         <div class="product-footer">
           <div class="product-price">1 400 <span>D</span></div>
-          <button class="btn-add" onclick="addToCart('Dashiki Brodé', 1400)">+ Cart</button>
+          <button class="btn-add" onclick="addToCart('Dashiki Brodé', 1400)"><span data-lang="fr">+ Panier</span><span data-lang="en">+ Cart</span></button>
         </div>
       </div>
     </div>
@@ -754,7 +755,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <div class="modal-overlay" id="cartModal">
   <div class="modal">
     <button class="modal-close" onclick="closeCart()">✕</button>
-    <div class="modal-title">Mon panier</div>
+    <div class="modal-title"><span data-lang="fr">Mon panier</span><span data-lang="en">My cart</span></div>
     <div class="cart-items" id="cartItems">
       <div class="cart-empty"><span data-lang="fr">Votre panier est vide.</span><span data-lang="en">Your cart is empty.</span></div>
     </div>
@@ -782,7 +783,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       <!-- BOUTON WHATSAPP (confirmation) -->
       <button onclick="commanderWhatsapp()" style="background:#25D366;color:white;border:none;padding:13px 24px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;width:100%;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:10px;transition:background 0.2s;opacity:0.9;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Confirmer via WhatsApp
+        <span data-lang="fr">Confirmer via WhatsApp</span><span data-lang="en">Confirm via WhatsApp</span>
       </button>
     </div>
   </div>
@@ -797,21 +798,21 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
     <h2 class="sec-title sec-title-light">Chez <em>Djamil</em></h2>
     <p class="sec-intro sec-intro-light"><span data-lang="fr">Atelier professionnel à Bakau New Town. Couture sur mesure, pressing et vêtements traditionnels africains pour une clientèle locale et internationale.</span><span data-lang="en">Professional atelier in Bakau New Town. Bespoke tailoring, pressing, and African traditional garments for local and international clients.</span></p>
     <div class="services-list">
-      <div class="service-item"><div class="service-num">I</div><div><div class="s-name"><span data-lang="fr">Confection sur mesure</span><span data-lang="en">Bespoke Tailoring</span></div><div class="s-desc">Women's and men's garments tailored to your exact measurements</div></div></div>
-      <div class="service-item"><div class="service-num">II</div><div><div class="s-name"><span data-lang="fr">Vêtements traditionnels</span><span data-lang="en">Traditional Garments</span></div><div class="s-desc">Boubou, kaftan, dashiki, ceremonial outfits in wax and bazin fabric</div></div></div>
-      <div class="service-item"><div class="service-num">III</div><div><div class="s-name"><span data-lang="fr">Pressing & Entretien</span><span data-lang="en">Pressing & Care</span></div><div class="s-desc">Professional ironing service with ticket tracking</div></div></div>
-      <div class="service-item"><div class="service-num">IV</div><div><div class="s-name"><span data-lang="fr">Broderie & Personnalisation</span><span data-lang="en">Embroidery & Customisation</span></div><div class="s-desc">Digital embroidery on garments, uniforms, promotional items</div></div></div>
+      <div class="service-item"><div class="service-num">I</div><div><div class="s-name"><span data-lang="fr">Confection sur mesure</span><span data-lang="en">Bespoke Tailoring</span></div><div class="s-desc"><span data-lang="fr">Vêtements femme et homme réalisés à vos mesures exactes</span><span data-lang="en">Women's and men's garments tailored to your exact measurements</span></div></div></div>
+      <div class="service-item"><div class="service-num">II</div><div><div class="s-name"><span data-lang="fr">Vêtements traditionnels</span><span data-lang="en">Traditional Garments</span></div><div class="s-desc"><span data-lang="fr">Boubou, kaftan, dashiki et tenues de cérémonie en wax et bazin</span><span data-lang="en">Boubou, kaftan, dashiki, ceremonial outfits in wax and bazin fabric</span></div></div></div>
+      <div class="service-item"><div class="service-num">III</div><div><div class="s-name"><span data-lang="fr">Pressing & Entretien</span><span data-lang="en">Pressing & Care</span></div><div class="s-desc"><span data-lang="fr">Service de repassage professionnel avec suivi par ticket</span><span data-lang="en">Professional ironing service with ticket tracking</span></div></div></div>
+      <div class="service-item"><div class="service-num">IV</div><div><div class="s-name"><span data-lang="fr">Broderie & Personnalisation</span><span data-lang="en">Embroidery & Customisation</span></div><div class="s-desc"><span data-lang="fr">Broderie digitale sur vêtements, uniformes et objets promotionnels</span><span data-lang="en">Digital embroidery on garments, uniforms, promotional items</span></div></div></div>
     </div>
   </div>
   <div class="fade-in" style="transition-delay:0.15s;">
     <div class="atelier-quote">
-      <p class="quote-text">"La mode africaine n'est pas une tendance. C'est un héritage vivant que nous habillons chaque jour."</p>
-      <div class="quote-author">— Moriba Traoré, Directeur</div>
+      <p class="quote-text"><span data-lang="fr">"La mode africaine n'est pas une tendance. C'est un héritage vivant que nous habillons chaque jour."</span><span data-lang="en">"African fashion is not a trend. It is a living heritage that we dress every day."</span></p>
+      <div class="quote-author"><span data-lang="fr">— Moriba Traoré, Directeur</span><span data-lang="en">— Moriba Traoré, Director</span></div>
     </div>
     <div style="margin-top:18px;overflow:hidden;height:160px;">
       <img loading="lazy" decoding="async" src="photo-07.webp" alt="Atelier Chez Djamil" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7);">
     </div>
-    <div class="client-note">✦ Clientèle de référence incluant des personnalités diplomatiques et officielles de la sous-région ouest-africaine.</div>
+    <div class="client-note"><span data-lang="fr">✦ Clientèle de référence incluant des personnalités diplomatiques et officielles de la sous-région ouest-africaine.</span><span data-lang="en">✦ Reference clients including diplomatic and official figures from across West Africa.</span></div>
     <div style="margin-top:18px;padding:24px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);">
       <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--or);margin-bottom:12px;"><span data-lang="fr">Nos engagements</span><span data-lang="en">Our commitments</span></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
@@ -829,18 +830,18 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <!-- PARTENAIRES -->
 <section class="partenaires" id="partenaires">
   <div class="eyebrow eyebrow-center fade-in"><span data-lang="fr">Reconnaissance institutionnelle</span><span data-lang="en">Institutional Recognition</span></div>
-  <h2 class="sec-title fade-in" style="text-align:center;">Our <em style="color:var(--wax-bleu);">Partners</em> / Nos Partenaires</h2>
+  <h2 class="sec-title fade-in" style="text-align:center;"><span data-lang="fr">Nos <em style="color:var(--wax-bleu);">Partenaires</em></span><span data-lang="en">Our <em style="color:var(--wax-bleu);">Partners</em></span></h2>
   <p class="sec-intro fade-in" style="text-align:center;margin:0 auto 44px;"><span data-lang="fr">Reconnus par les institutions internationales de développement pour notre impact sur l'emploi des jeunes.</span><span data-lang="en">Recognised by international development institutions for our impact on youth employment.</span></p>
   <div class="partners-grid fade-in">
-    <div class="partner-box"><div class="partner-logo">ITC</div><div class="partner-name">Int'l Trade Centre</div></div>
-    <div class="partner-box"><div class="partner-logo">GIZ</div><div class="partner-name">Coopération allemande</div></div>
-    <div class="partner-box"><div class="partner-logo">WB</div><div class="partner-name">Banque Mondiale</div></div>
-    <div class="partner-box"><div class="partner-logo">GOG</div><div class="partner-name">Gouvernement Gambie</div></div>
+    <div class="partner-box"><div class="partner-logo">ITC</div><div class="partner-name"><span data-lang="fr">Centre du commerce international</span><span data-lang="en">Int'l Trade Centre</span></div></div>
+    <div class="partner-box"><div class="partner-logo">GIZ</div><div class="partner-name"><span data-lang="fr">Coopération allemande</span><span data-lang="en">German Cooperation</span></div></div>
+    <div class="partner-box"><div class="partner-logo">WB</div><div class="partner-name"><span data-lang="fr">Banque Mondiale</span><span data-lang="en">World Bank</span></div></div>
+    <div class="partner-box"><div class="partner-logo">GOG</div><div class="partner-name"><span data-lang="fr">Gouvernement Gambie</span><span data-lang="en">Government of The Gambia</span></div></div>
   </div>
   <div class="itc-highlight fade-in">
     <div class="itc-badge">YEP</div>
     <div>
-      <div class="itc-title">YEP Tourism & Creative Industries Programme — ITC The Gambia</div>
+      <div class="itc-title"><span data-lang="fr">Programme YEP Tourisme & Industries créatives — ITC Gambie</span><span data-lang="en">YEP Tourism & Creative Industries Programme — ITC The Gambia</span></div>
       <div class="itc-desc"><span data-lang="fr">Djamil Academy sélectionnée directement par l'ITC pour mettre en œuvre un programme de formation en broderie digitale dans le cadre du projet d'employabilité des jeunes. Proposition soumise et en cours d'évaluation.</span><span data-lang="en">Djamil Academy was directly selected by ITC to implement a digital embroidery training programme as part of the youth employability project. Proposal submitted and under evaluation.</span></div>
     </div>
   </div>
@@ -852,7 +853,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
   <div style="text-align:center;margin-bottom:60px;padding:0 40px;">
     <div style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--or);margin-bottom:14px;"><span data-lang="fr">✦ Références clients ✦</span><span data-lang="en">✦ Client References ✦</span></div>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,52px);font-weight:400;color:white;line-height:1.15;margin-bottom:16px;">
-      Ils nous font <em style="font-style:italic;color:var(--or);">confiance</em> / They trust <em style="font-style:italic;color:var(--or);">us</em>
+      <span data-lang="fr">Ils nous font <em style="font-style:italic;color:var(--or);">confiance</em></span><span data-lang="en">They trust <em style="font-style:italic;color:var(--or);">us</em></span>
     </h2>
     <p style="font-size:15px;color:rgba(255,255,255,0.5);max-width:520px;margin:0 auto;line-height:1.75;">
       <span data-lang="fr">Des institutions et entreprises de premier plan font confiance à Djamil Academy pour leurs besoins en confection et formation.</span><span data-lang="en">Leading institutions trust Djamil Academy for their tailoring and training needs.</span>
@@ -873,14 +874,14 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
             <div style="font-size:28px;font-weight:900;color:#1a2a4a;letter-spacing:2px;line-height:1;">GIA</div>
             <div style="font-size:8px;color:#c0392b;letter-spacing:1px;font-weight:600;">GAMBIA INTERNATIONAL AIRLINES</div>
           </div>
-          <div style="font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;">Banjul Int'l Airport</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;"><span data-lang="fr">Aéroport international de Banjul</span><span data-lang="en">Banjul Int'l Airport</span></div>
         </div>
 
         <!-- Détails contrat -->
         <div>
           <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--or);margin-bottom:10px;"><span data-lang="fr">Contrat officiel</span><span data-lang="en">Official Contract</span></div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:white;font-weight:400;margin-bottom:8px;">
-            Uniforms Sewing Contract Agreement
+            <span data-lang="fr">Contrat de confection des uniformes</span><span data-lang="en">Uniforms Sewing Contract Agreement</span>
           </div>
           <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px;">
             <span data-lang="fr">Confection des uniformes officiels pour le personnel de Gambia International Airlines Ltd — Customer Services, Traffic, Claims, Marketing & Réservations.</span><span data-lang="en">Sewing of official uniforms for all GIA staff departments at Banjul International Airport.</span>
@@ -891,8 +892,8 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
               <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--or);font-weight:600;">Sept. 2024</div>
             </div>
             <div style="background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);padding:12px 20px;border-radius:3px;">
-              <div style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Statut</div>
-              <div style="font-size:16px;color:#4ade80;font-weight:700;">✓ Contrat signé</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;"><span data-lang="fr">Statut</span><span data-lang="en">Status</span></div>
+              <div style="font-size:16px;color:#4ade80;font-weight:700;"><span data-lang="fr">✓ Contrat signé</span><span data-lang="en">✓ Contract signed</span></div>
             </div>
           </div>
         </div>
@@ -905,7 +906,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
     <div style="text-align:center;margin-bottom:36px;">
       <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--or);margin-bottom:10px;"><span data-lang="fr">Galerie</span><span data-lang="en">Gallery</span></div>
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:white;">
-        Uniformes GIA — <em style="color:var(--or);font-style:italic;">Nos réalisations</em>
+        <span data-lang="fr">Uniformes GIA — <em style="color:var(--or);font-style:italic;">Nos réalisations</em></span><span data-lang="en">GIA Uniforms — <em style="color:var(--or);font-style:italic;">Our work</em></span>
       </h3>
     </div>
 
@@ -913,27 +914,27 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       <!-- Photos à venir — emplacements réservés -->
       <div class="gia-photo-slot" style="aspect-ratio:3/4;background:linear-gradient(135deg,#1a2a4a,#0a1628);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
         <div style="font-size:36px;opacity:0.3;">✈️</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;">Photo à venir<br>Photo coming soon</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;"><span data-lang="fr">Photo à venir</span><span data-lang="en"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span></div>
       </div>
       <div class="gia-photo-slot" style="aspect-ratio:3/4;background:linear-gradient(135deg,#1a2a4a,#0a1628);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
         <div style="font-size:36px;opacity:0.3;">✈️</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;">Photo à venir<br>Photo coming soon</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;"><span data-lang="fr">Photo à venir</span><span data-lang="en"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span></div>
       </div>
       <div class="gia-photo-slot" style="aspect-ratio:3/4;background:linear-gradient(135deg,#1a2a4a,#0a1628);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
         <div style="font-size:36px;opacity:0.3;">✈️</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;">Photo à venir<br>Photo coming soon</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;"><span data-lang="fr">Photo à venir</span><span data-lang="en"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span></div>
       </div>
       <div class="gia-photo-slot" style="aspect-ratio:3/4;background:linear-gradient(135deg,#1a2a4a,#0a1628);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
         <div style="font-size:36px;opacity:0.3;">✈️</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;">Photo à venir<br>Photo coming soon</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;"><span data-lang="fr">Photo à venir</span><span data-lang="en"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span></div>
       </div>
       <div class="gia-photo-slot" style="aspect-ratio:3/4;background:linear-gradient(135deg,#1a2a4a,#0a1628);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
         <div style="font-size:36px;opacity:0.3;">✈️</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;">Photo à venir<br>Photo coming soon</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;"><span data-lang="fr">Photo à venir</span><span data-lang="en"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span></div>
       </div>
       <div class="gia-photo-slot" style="aspect-ratio:3/4;background:linear-gradient(135deg,#1a2a4a,#0a1628);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
         <div style="font-size:36px;opacity:0.3;">✈️</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;">Photo à venir<br>Photo coming soon</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:1px;"><span data-lang="fr">Photo à venir</span><span data-lang="en"><span data-lang="fr">Photo à venir</span><span data-lang="en">Photo coming soon</span></span></div>
       </div>
     </div>
 
@@ -952,14 +953,14 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
     <div style="max-width:900px;margin:0 auto;text-align:center;">
       <div style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--or);margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:12px;">
         <span style="width:30px;height:1px;background:var(--or);display:inline-block;"></span>
-        Fondateur & Directeur
+        <span data-lang="fr">Fondateur & Directeur</span><span data-lang="en">Founder &amp; Director</span>
         <span style="width:30px;height:1px;background:var(--or);display:inline-block;"></span>
       </div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,58px);font-weight:300;color:white;line-height:1.1;margin-bottom:10px;">
         Moriba <em style="font-style:italic;color:var(--or);">Traoré</em>
       </h2>
       <p style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:0;">
-        Designer · Formateur · Entrepreneur · Bakau, The Gambia
+        <span data-lang="fr">Designer · Formateur · Entrepreneur · Bakau, The Gambia</span><span data-lang="en">Designer · Trainer · Entrepreneur · Bakau, The Gambia</span>
       </p>
     </div>
   </div>
@@ -969,7 +970,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
     <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
 
       <!-- FRANÇAIS -->
-      <div>
+      <div data-lang="fr" data-block>
         <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--or);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid rgba(200,151,58,0.3);">
           🇫🇷 &nbsp;Biographie
         </div>
@@ -1004,7 +1005,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       </div>
 
       <!-- ANGLAIS -->
-      <div>
+      <div data-lang="en" data-block>
         <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--or);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid rgba(200,151,58,0.3);">
           🇬🇧 &nbsp;Biography
         </div>
@@ -1044,19 +1045,19 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
     <div style="max-width:900px;margin:50px auto 0;padding-top:40px;border-top:1px solid rgba(255,255,255,0.06);display:grid;grid-template-columns:repeat(4,1fr);gap:2px;">
       <div style="text-align:center;padding:24px;background:rgba(255,255,255,0.03);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--or);line-height:1;">40+</div>
-        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px;"><span data-lang="fr">Ans d'expérience</span><span data-lang="en">Years of experience</span><br>Years of experience</div>
+        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px;"><span data-lang="fr">Ans d'expérience</span><span data-lang="en">Years of experience</span></div>
       </div>
       <div style="text-align:center;padding:24px;background:rgba(255,255,255,0.03);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--or);line-height:1;">20</div>
-        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px;"><span data-lang="fr">Ans en Gambie</span><span data-lang="en">Years in The Gambia</span><br>Years in The Gambia</div>
+        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px;"><span data-lang="fr">Ans en Gambie</span><span data-lang="en">Years in The Gambia</span></div>
       </div>
       <div style="text-align:center;padding:24px;background:rgba(255,255,255,0.03);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--or);line-height:1;">2</div>
-        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px;">Entités fondées<br>Founded entities</div>
+        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px;"><span data-lang="fr">Entités fondées</span><span data-lang="en">Founded entities</span></div>
       </div>
       <div style="text-align:center;padding:24px;background:rgba(255,255,255,0.03);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--or);line-height:1;">∞</div>
-        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px;">Passion & vision<br>Passion & vision</div>
+        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px;">Passion & vision</div>
       </div>
     </div>
 
@@ -1083,11 +1084,11 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <section class="apropos" id="apropos">
   <div class="fade-in">
     <div class="eyebrow"><span data-lang="fr">Notre histoire</span><span data-lang="en">Our Story</span></div>
-    <h2 class="sec-title">Born from <em>passion</em>,<br><span data-lang="fr">bâti en 40 ans</span><span data-lang="en">built over 40 years</span></h2>
+    <h2 class="sec-title"><span data-lang="fr">Née d'une <em>passion</em>,</span><span data-lang="en">Born from <em>passion</em>,</span><br><span data-lang="fr">bâti en 40 ans</span><span data-lang="en">built over 40 years</span></h2>
     <p class="sec-intro"><span data-lang="fr">Plus de 40 ans à son propre compte. Une vie dédiée à la mode, d'abord en Côte d'Ivoire, puis enracinée en Gambie depuis près de 20 ans.</span><span data-lang="en">Over 40 years working independently. A lifetime dedicated to fashion, first in Côte d'Ivoire, then rooted in The Gambia for nearly 20 years.</span></p>
     <div class="timeline">
-      <div class="tl-item"><div class="tl-year">Années 1980+</div><div class="tl-title"><span data-lang="fr">40 ans à son compte</span><span data-lang="en">40 years of independence</span></div><div class="tl-desc"><span data-lang="fr">Moriba Traoré se met à son propre compte — une trajectoire d'entrepreneur de toujours.</span><span data-lang="en">Moriba Traoré begins working independently — an entrepreneur from the very start.</span></div></div>
-      <div class="tl-item"><div class="tl-year">Depuis ~2005</div><div class="tl-title"><span data-lang="fr">Installé en Gambie</span><span data-lang="en">Settled in The Gambia</span></div><div class="tl-desc"><span data-lang="fr">Près de 20 ans à Bakau New Town, avec une solide réputation dans le secteur de la mode.</span><span data-lang="en">Nearly 20 years in Bakau New Town, building a solid reputation in the fashion sector.</span></div></div>
+      <div class="tl-item"><div class="tl-year"><span data-lang="fr">Années 1980+</span><span data-lang="en">1980s onwards</span></div><div class="tl-title"><span data-lang="fr">40 ans à son compte</span><span data-lang="en">40 years of independence</span></div><div class="tl-desc"><span data-lang="fr">Moriba Traoré se met à son propre compte — une trajectoire d'entrepreneur de toujours.</span><span data-lang="en">Moriba Traoré begins working independently — an entrepreneur from the very start.</span></div></div>
+      <div class="tl-item"><div class="tl-year"><span data-lang="fr">Depuis ~2005</span><span data-lang="en">Since ~2005</span></div><div class="tl-title"><span data-lang="fr">Installé en Gambie</span><span data-lang="en">Settled in The Gambia</span></div><div class="tl-desc"><span data-lang="fr">Près de 20 ans à Bakau New Town, avec une solide réputation dans le secteur de la mode.</span><span data-lang="en">Nearly 20 years in Bakau New Town, building a solid reputation in the fashion sector.</span></div></div>
       <div class="tl-item"><div class="tl-year">2022</div><div class="tl-title"><span data-lang="fr">Création de Chez Djamil</span><span data-lang="en">Creation of Chez Djamil</span></div><div class="tl-desc"><span data-lang="fr">Ouverture de l'atelier de couture sur mesure et de pressing à Bakau New Town.</span><span data-lang="en">Opening of the bespoke tailoring and pressing atelier in Bakau New Town.</span></div></div>
       <div class="tl-item"><div class="tl-year">2023</div><div class="tl-title"><span data-lang="fr">Enregistrement DAFD</span><span data-lang="en">DAFD Registration</span></div><div class="tl-desc"><span data-lang="fr">L'académie est officiellement enregistrée (Rég. 2023/C22040) comme institution vocationnelle agréée.</span><span data-lang="en">The academy is officially registered (Reg. 2023/C22040) as an accredited vocational institution.</span></div></div>
       <div class="tl-item"><div class="tl-year">2025–2026</div><div class="tl-title"><span data-lang="fr">Partenariat ITC & Digital</span><span data-lang="en">ITC Partnership & Digital</span></div><div class="tl-desc"><span data-lang="fr">Programme YEP soumis à l'ITC. Processus de digitalisation en cours avec la GIZ et la Banque mondiale.</span><span data-lang="en">YEP programme submitted to ITC. Digitalisation process underway with GIZ and the World Bank.</span></div></div>
@@ -1104,7 +1105,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       <p class="director-bio"><span data-lang="fr">Sa vision : former une nouvelle génération de créateurs africains capables de s'imposer sur les marchés locaux comme internationaux.</span><span data-lang="en">His vision: to train a new generation of African creators capable of making their mark on both local and international markets.</span></p>
       <div class="director-tags">
         <span class="tag"><span data-lang="fr">Couture sur mesure</span><span data-lang="en">Bespoke Tailoring</span></span>
-        <span class="tag">Broderie digitale</span>
+        <span class="tag"><span data-lang="fr">Broderie digitale</span><span data-lang="en">Digital embroidery</span></span>
         <span class="tag"><span data-lang="fr">Formation professionnelle</span><span data-lang="en">Vocational Training</span></span>
         <span class="tag"><span data-lang="fr">Mode africaine</span><span data-lang="en">African Fashion</span></span>
         <span class="tag"><span data-lang="fr">40 ans d'expérience</span><span data-lang="en">40 years experience</span></span>
@@ -1120,97 +1121,97 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
   <div class="inscription-inner">
     <div class="fade-in">
       <div class="eyebrow"><span data-lang="fr">Rejoindre l'académie</span><span data-lang="en">Join the Academy</span></div>
-      <h2 class="sec-title">Online <em style="color:var(--wax-bleu);">Enrolment</em> / Inscription en ligne</h2>
+      <h2 class="sec-title"><span data-lang="fr">Inscription <em style="color:var(--wax-bleu);">en ligne</em></span><span data-lang="en">Online <em style="color:var(--wax-bleu);">Enrolment</em></span></h2>
       <p class="sec-intro"><span data-lang="fr">Remplis le formulaire et nous te contactons dans les 48 heures pour confirmer ta place et t'expliquer les prochaines étapes.</span><span data-lang="en">Fill in the form and we will contact you within 48 hours to confirm your place and explain the next steps.</span></p>
       <div class="info-box">
         <div class="info-box-title"><span data-lang="fr">Informations pratiques</span><span data-lang="en">Practical Information</span></div>
-        <div class="info-row"><span class="label">Durée</span><span class="val">9 mois (3 trimestres)</span></div>
-        <div class="info-row"><span class="label">Horaires</span><span class="val"><span data-lang="fr">25–30h / semaine</span><span data-lang="en">25–30h / week</span></span></div>
-        <div class="info-row"><span class="label">Âge</span><span class="val">18 à 35 ans</span></div>
-        <div class="info-row"><span class="label">Lieu</span><span class="val">Bakau New Town</span></div>
-        <div class="info-row"><span class="label">Certification</span><span class="val">Certificat technique DAFD</span></div>
-        <div class="info-row"><span class="label">Priorité</span><span class="val">Femmes & personnes vulnérables</span></div>
+        <div class="info-row"><span class="label"><span data-lang="fr">Durée</span><span data-lang="en">Duration</span></span><span class="val"><span data-lang="fr">9 mois (3 trimestres)</span><span data-lang="en">9 months (3 terms)</span></span></div>
+        <div class="info-row"><span class="label"><span data-lang="fr">Horaires</span><span data-lang="en">Schedule</span></span><span class="val"><span data-lang="fr">25–30h / semaine</span><span data-lang="en">25–30h / week</span></span></div>
+        <div class="info-row"><span class="label"><span data-lang="fr">Âge</span><span data-lang="en">Age</span></span><span class="val"><span data-lang="fr">18 à 35 ans</span><span data-lang="en">18 to 35 years</span></span></div>
+        <div class="info-row"><span class="label"><span data-lang="fr">Lieu</span><span data-lang="en">Location</span></span><span class="val">Bakau New Town</span></div>
+        <div class="info-row"><span class="label">Certification</span><span class="val"><span data-lang="fr">Certificat technique DAFD</span><span data-lang="en">DAFD Technical Certificate</span></span></div>
+        <div class="info-row"><span class="label"><span data-lang="fr">Priorité</span><span data-lang="en">Priority</span></span><span class="val"><span data-lang="fr">Femmes & personnes vulnérables</span><span data-lang="en">Women &amp; vulnerable people</span></span></div>
       </div>
     </div>
     <div class="fade-in" style="transition-delay:0.15s;">
       <div class="inscription-form">
         <div class="form-title"><span data-lang="fr">Formulaire d'inscription</span><span data-lang="en">Enrollment Form</span></div>
-        <div class="form-sub">Djamil Academy of Fashion Design · Rég. 2023/C22040</div>
+        <div class="form-sub"><span data-lang="fr">Djamil Academy of Fashion Design · Rég. 2023/C22040</span><span data-lang="en">Djamil Academy of Fashion Design · Reg. 2023/C22040</span></div>
         
         <!-- SECTION ÉTUDIANT -->
         <div class="form-section-heading"><span data-lang="fr">👤 INFORMATIONS DU CANDIDAT</span><span data-lang="en">👤 CANDIDATE'S INFORMATION</span></div>
         <div class="form-row-2">
-          <div class="form-group"><label>Prénom *</label><input type="text" id="f-prenom" placeholder="Ton prénom"></div>
-          <div class="form-group"><label>Nom *</label><input type="text" id="f-nom" placeholder="Ton nom"></div>
+          <div class="form-group"><label><span data-lang="fr">Prénom *</span><span data-lang="en">First name *</span></label><input type="text" id="f-prenom" placeholder="Ton prénom" data-ph-fr="Ton prénom" data-ph-en="Your first name"></div>
+          <div class="form-group"><label><span data-lang="fr">Nom *</span><span data-lang="en">Last name *</span></label><input type="text" id="f-nom" placeholder="Ton nom" data-ph-fr="Ton nom" data-ph-en="Your last name"></div>
         </div>
         <div class="form-row-2">
-          <div class="form-group"><label>Âge *</label><input type="number" id="f-age" placeholder="18–35 ans" min="18" max="35"></div>
-          <div class="form-group"><label>Sexe</label>
+          <div class="form-group"><label><span data-lang="fr">Âge *</span><span data-lang="en">Age *</span></label><input type="number" id="f-age" placeholder="18–35 ans" data-ph-fr="18–35 ans" data-ph-en="18–35 years" min="18" max="35"></div>
+          <div class="form-group"><label><span data-lang="fr">Sexe</span><span data-lang="en">Gender</span></label>
             <select id="f-sexe">
-              <option value="">Choisir...</option>
-              <option>Femme</option>
-              <option>Homme</option>
-              <option>Autre</option>
+              <option value="" data-fr="Choisir..." data-en="Select...">Choisir...</option>
+              <option data-fr="Femme" data-en="Female">Femme</option>
+              <option data-fr="Homme" data-en="Male">Homme</option>
+              <option data-fr="Autre" data-en="Other">Autre</option>
             </select>
           </div>
         </div>
         <div class="form-group"><label><span data-lang="fr">Téléphone / WhatsApp *</span><span data-lang="en">Phone / WhatsApp *</span></label><input type="text" id="f-tel" placeholder="+220 7010004"></div>
-        <div class="form-group"><label>Email (si disponible)</label><input type="email" id="f-email" placeholder="email@exemple.com"></div>
+        <div class="form-group"><label><span data-lang="fr">Email (si disponible)</span><span data-lang="en">Email (if available)</span></label><input type="email" id="f-email" placeholder="email@exemple.com" data-ph-fr="email@exemple.com" data-ph-en="email@example.com"></div>
         
         <!-- SECTION PARCOURS ACADÉMIQUE -->
         <div class="form-section-heading"><span data-lang="fr">🎓 PARCOURS ACADÉMIQUE</span><span data-lang="en">🎓 ACADEMIC PATHWAY</span></div>
-        <div class="form-group"><label>Formation souhaitée *</label>
+        <div class="form-group"><label><span data-lang="fr">Formation souhaitée *</span><span data-lang="en">Preferred course *</span></label>
           <select id="f-formation">
-            <option value="">Choisir une formation...</option>
+            <option value="" data-fr="Choisir une formation..." data-en="Select a course...">Choisir une formation...</option>
             <option data-fr="Coupe & Patron (niveau débutant)" data-en="Pattern Making (beginner)">Coupe & Patron (niveau débutant)</option>
             <option data-fr="Coupe & Patron (niveau avancé)" data-en="Pattern Making (advanced)">Coupe & Patron (niveau avancé)</option>
             <option data-fr="Broderie Digitale" data-en="Digital Embroidery">Broderie Digitale</option>
-            <option>Confection — Wax & Tissu africain</option>
-            <option>Boubou, Kaftan & Tenues traditionnelles</option>
-            <option>Entrepreneuriat & Création d'entreprise</option>
+            <option data-fr="Confection — Wax &amp; Tissu africain" data-en="Tailoring — Wax &amp; African fabric">Confection — Wax & Tissu africain</option>
+            <option data-fr="Boubou, Kaftan &amp; Tenues traditionnelles" data-en="Boubou, Kaftan &amp; traditional wear">Boubou, Kaftan & Tenues traditionnelles</option>
+            <option data-fr="Entrepreneuriat &amp; Création d'entreprise" data-en="Entrepreneurship &amp; business creation">Entrepreneuriat & Création d'entreprise</option>
           </select>
         </div>
-        <div class="form-group"><label>Niveau actuel en couture</label>
+        <div class="form-group"><label><span data-lang="fr">Niveau actuel en couture</span><span data-lang="en">Current sewing level</span></label>
           <select id="f-niveau">
-            <option value="">Choisir...</option>
-            <option>Aucune expérience</option>
-            <option>Débutant (quelques bases)</option>
-            <option>Intermédiaire</option>
-            <option>Avancé</option>
+            <option value="" data-fr="Choisir..." data-en="Select...">Choisir...</option>
+            <option data-fr="Aucune expérience" data-en="No experience">Aucune expérience</option>
+            <option data-fr="Débutant (quelques bases)" data-en="Beginner (some basics)">Débutant (quelques bases)</option>
+            <option data-fr="Intermédiaire" data-en="Intermediate">Intermédiaire</option>
+            <option data-fr="Avancé" data-en="Advanced">Avancé</option>
           </select>
         </div>
-        <div class="form-group"><label>Pourquoi veux-tu rejoindre l'académie ?</label><textarea id="f-motivation" placeholder="Décris ta motivation en quelques mots..."></textarea></div>
+        <div class="form-group"><label><span data-lang="fr">Pourquoi veux-tu rejoindre l'académie ?</span><span data-lang="en">Why do you want to join the academy?</span></label><textarea id="f-motivation" placeholder="Décris ta motivation en quelques mots..." data-ph-fr="Décris ta motivation en quelques mots..." data-ph-en="Describe your motivation in a few words..."></textarea></div>
         
         <!-- SECTION RESPONSABLES / PARENTS -->
         <div class="form-section-heading"><span data-lang="fr">👨‍👩‍👧 RESPONSABLES LÉGAUX</span><span data-lang="en">👨‍👩‍👧 PARENTS OR GUARDIANS</span></div>
         <div class="form-row-2">
-          <div class="form-group"><label>Prénom du parent/tuteur *</label><input type="text" id="f-parent-prenom" placeholder="Prénom du parent"></div>
-          <div class="form-group"><label>Nom du parent/tuteur *</label><input type="text" id="f-parent-nom" placeholder="Nom du parent"></div>
+          <div class="form-group"><label><span data-lang="fr">Prénom du parent/tuteur *</span><span data-lang="en">Parent/guardian first name *</span></label><input type="text" id="f-parent-prenom" placeholder="Prénom du parent" data-ph-fr="Prénom du parent" data-ph-en="Parent's first name"></div>
+          <div class="form-group"><label><span data-lang="fr">Nom du parent/tuteur *</span><span data-lang="en">Parent/guardian last name *</span></label><input type="text" id="f-parent-nom" placeholder="Nom du parent" data-ph-fr="Nom du parent" data-ph-en="Parent's last name"></div>
         </div>
         <div class="form-row-2">
-          <div class="form-group"><label>Relation *</label>
+          <div class="form-group"><label><span data-lang="fr">Relation *</span><span data-lang="en">Relationship *</span></label>
             <select id="f-parent-relation">
-              <option value="">Choisir...</option>
+              <option value="" data-fr="Choisir..." data-en="Select...">Choisir...</option>
               <option data-fr="Mère" data-en="Mother">Mère</option>
               <option data-fr="Père" data-en="Father">Père</option>
               <option data-fr="Tuteur" data-en="Guardian">Tuteur</option>
               <option data-fr="Autre" data-en="Other">Autre</option>
             </select>
           </div>
-          <div class="form-group"><label>Téléphone parent *</label><input type="text" id="f-parent-tel" placeholder="+220 XXXXXXX"></div>
+          <div class="form-group"><label><span data-lang="fr">Téléphone parent *</span><span data-lang="en">Parent phone *</span></label><input type="text" id="f-parent-tel" placeholder="+220 XXXXXXX"></div>
         </div>
-        <div class="form-group"><label>Email du parent (si disponible)</label><input type="email" id="f-parent-email" placeholder="email@exemple.com"></div>
+        <div class="form-group"><label><span data-lang="fr">Email du parent (si disponible)</span><span data-lang="en">Parent email (if available)</span></label><input type="email" id="f-parent-email" placeholder="email@exemple.com" data-ph-fr="email@exemple.com" data-ph-en="email@example.com"></div>
         
         <!-- SECTION CONTACT D'URGENCE & RESPONSABLE FINANCIER -->
         <div class="form-section-heading"><span data-lang="fr">🚨 CONTACT D'URGENCE & RESPONSABLE FINANCIER</span><span data-lang="en">🚨 EMERGENCY & FINANCIAL CONTACT</span></div>
         <div class="form-row-2">
-          <div class="form-group"><label>Prénom *</label><input type="text" id="f-emergency-prenom" placeholder="Prénom"></div>
-          <div class="form-group"><label>Nom *</label><input type="text" id="f-emergency-nom" placeholder="Nom"></div>
+          <div class="form-group"><label><span data-lang="fr">Prénom *</span><span data-lang="en">First name *</span></label><input type="text" id="f-emergency-prenom" placeholder="Prénom" data-ph-fr="Prénom" data-ph-en="First name"></div>
+          <div class="form-group"><label><span data-lang="fr">Nom *</span><span data-lang="en">Last name *</span></label><input type="text" id="f-emergency-nom" placeholder="Nom" data-ph-fr="Nom" data-ph-en="Last name"></div>
         </div>
         <div class="form-row-2">
-          <div class="form-group"><label>Relation avec l'étudiant *</label>
+          <div class="form-group"><label><span data-lang="fr">Relation avec l'étudiant *</span><span data-lang="en">Relationship to the student *</span></label>
             <select id="f-emergency-relation">
-              <option value="">Choisir...</option>
+              <option value="" data-fr="Choisir..." data-en="Select...">Choisir...</option>
               <option data-fr="Parent" data-en="Parent">Parent</option>
               <option data-fr="Frère" data-en="Brother">Frère</option>
               <option data-fr="Sœur" data-en="Sister">Sœur</option>
@@ -1218,11 +1219,11 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
               <option data-fr="Autre" data-en="Other">Autre</option>
             </select>
           </div>
-          <div class="form-group"><label>Téléphone d'urgence *</label><input type="text" id="f-emergency-tel" placeholder="+220 XXXXXXX"></div>
+          <div class="form-group"><label><span data-lang="fr">Téléphone d'urgence *</span><span data-lang="en">Emergency phone *</span></label><input type="text" id="f-emergency-tel" placeholder="+220 XXXXXXX"></div>
         </div>
         <div class="form-group"><label><span data-lang="fr">Responsable du paiement des frais *</span><span data-lang="en">Financially responsible person *</span></label>
           <select id="f-financial-responsible">
-            <option value="">Choisir...</option>
+            <option value="" data-fr="Choisir..." data-en="Select...">Choisir...</option>
             <option data-fr="L'étudiant(e) lui-même" data-en="The student">L'étudiant(e) lui-même</option>
             <option data-fr="Mère" data-en="Mother">Mère</option>
             <option data-fr="Père" data-en="Father">Père</option>
@@ -1250,7 +1251,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       <span data-lang="fr">✦ Pressing & Livraison ✦</span><span data-lang="en">✦ Pressing & Delivery ✦</span>
     </div>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,52px);font-weight:400;color:white;line-height:1.15;margin-bottom:16px;">
-      Pressing & <em style="font-style:italic;color:#4ade80;">Livraison</em>
+      <span data-lang="fr">Pressing & <em style="font-style:italic;color:#4ade80;">Livraison</em></span><span data-lang="en">Pressing & <em style="font-style:italic;color:#4ade80;">Delivery</em></span>
     </h2>
     <p style="font-size:15px;color:rgba(255,255,255,0.55);max-width:520px;margin:0 auto;line-height:1.75;font-weight:300;"><span data-lang="fr">Service de repassage professionnel avec collecte et livraison à domicile.</span><span data-lang="en">Professional ironing service with home collection and delivery across Banjul and surroundings.</span>
     </p>
@@ -1294,7 +1295,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       </p>
       <div style="background:rgba(74,222,128,0.15);border:1px solid rgba(74,222,128,0.4);padding:14px;border-radius:4px;">
         <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#4ade80;margin-bottom:4px;"><span data-lang="fr">Collecte</span><span data-lang="en">Collection</span></div>
-        <div style="font-size:26px;font-weight:800;color:white;font-family:'Cormorant Garamond',serif;"><span data-lang="fr">GRATUIT</span><span data-lang="en">FREE</span></div>
+        <div style="font-size:26px;font-weight:800;color:white;font-family:'Cormorant Garamond',serif;"><span data-lang="fr">GRATUIT</span><span data-lang="en"><span data-lang="fr">GRATUIT</span><span data-lang="en">FREE</span></span></div>
       </div>
     </div>
 
@@ -1409,8 +1410,8 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
       <!-- Zones livraison -->
       <div style="display:flex;flex-direction:column;gap:6px;">
         <div style="display:flex;justify-content:space-between;padding:7px 12px;background:rgba(74,222,128,0.1);border-radius:3px;">
-          <span style="font-size:12px;color:rgba(255,255,255,0.6);">📍 Bakau (pickup)</span>
-          <span style="color:#4ade80;font-weight:700;font-size:13px;">FREE</span>
+          <span style="font-size:12px;color:rgba(255,255,255,0.6);"><span data-lang="fr">📍 Bakau (dépôt)</span><span data-lang="en">📍 Bakau (pickup)</span></span>
+          <span style="color:#4ade80;font-weight:700;font-size:13px;"><span data-lang="fr">GRATUIT</span><span data-lang="en">FREE</span></span>
         </div>
         <div style="display:flex;justify-content:space-between;padding:7px 12px;background:rgba(167,139,250,0.1);border-radius:3px;">
           <span style="font-size:12px;color:rgba(255,255,255,0.6);">📍 Serrekunda</span>
@@ -1422,7 +1423,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
         </div>
         <div style="display:flex;justify-content:space-between;padding:7px 12px;background:rgba(167,139,250,0.08);border-radius:3px;">
           <span style="font-size:12px;color:rgba(255,255,255,0.6);"><span data-lang="fr">📍 Autres</span><span data-lang="en">📍 Other</span></span>
-          <span style="color:#a78bfa;font-weight:700;font-size:13px;">On request</span>
+          <span style="color:#a78bfa;font-weight:700;font-size:13px;"><span data-lang="fr">Sur devis</span><span data-lang="en">On request</span></span>
         </div>
       </div>
     </div>
@@ -1436,8 +1437,8 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
           <span data-lang="fr">Commandez votre pressing maintenant 🔥</span><span data-lang="en">Order your pressing now 🔥</span>
         </div>
         <p style="font-size:13px;color:rgba(0,0,0,0.6);line-height:1.6;">
-          Contact us on WhatsApp to schedule your collection. We confirm within the hour.<br>
-          Payment on delivery or via Wave · <strong>+220 7628683</strong>
+          <span data-lang="fr">Contactez-nous sur WhatsApp pour programmer la collecte. Nous confirmons dans l'heure.</span><span data-lang="en">Contact us on WhatsApp to schedule your collection. We confirm within the hour.</span><br>
+          <span data-lang="fr">Paiement à la livraison ou par Wave ·</span><span data-lang="en">Payment on delivery or via Wave ·</span> <strong>+220 7628683</strong>
         </p>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0;">
@@ -1455,9 +1456,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
     <div style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.2);padding:16px 24px;display:flex;align-items:center;gap:14px;margin-top:3px;">
       <span style="font-size:24px;">⏱️</span>
       <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.6;margin:0;">
-        <strong style="color:white;"><span data-lang="fr">Délai :</span><span data-lang="en">Turnaround:</span></strong> Ready in <strong style="color:#4ade80;">24 to 48 hours</strong> after collection. 
-        For urgent orders, contact us directly. /
-        Vos vêtements sont prêts en <strong style="color:#4ade80;">24 à 48 heures</strong> après collecte.
+        <strong style="color:white;"><span data-lang="fr">Délai :</span><span data-lang="en">Turnaround:</span></strong> <span data-lang="fr">Vos vêtements sont prêts en <strong style="color:#4ade80;">24 à 48 heures</strong> après collecte. Pour une commande urgente, contactez-nous directement.</span><span data-lang="en">Ready in <strong style="color:#4ade80;">24 to 48 hours</strong> after collection. For urgent orders, contact us directly.</span>
       </p>
     </div>
   </div>
@@ -1471,8 +1470,8 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
     <h2 class="sec-title sec-title-light"><span data-lang="fr">Travaillons<br>ensemble</span><span data-lang="en">Let's work<br>together</span></h2>
     <p class="sec-intro sec-intro-light"><span data-lang="fr">Pour une commande, un partenariat institutionnel ou toute autre demande.</span><span data-lang="en">For an order, institutional partnership, or any other request.</span></p>
     <div class="contact-details">
-      <div class="contact-item"><div class="contact-icon">📍</div><div><div class="ci-label">Adresse</div><div class="ci-value">Bakau New Town, The Gambia</div></div></div>
-      <div class="contact-item"><div class="contact-icon">🏛</div><div><div class="ci-label">Enregistrement</div><div class="ci-value">Rég. N° 2023/C22040</div>
+      <div class="contact-item"><div class="contact-icon">📍</div><div><div class="ci-label"><span data-lang="fr">Adresse</span><span data-lang="en">Address</span></div><div class="ci-value">Bakau New Town, The Gambia</div></div></div>
+      <div class="contact-item"><div class="contact-icon">🏛</div><div><div class="ci-label"><span data-lang="fr">Enregistrement</span><span data-lang="en">Registration</span></div><div class="ci-value"><span data-lang="fr">Rég. N° 2023/C22040</span><span data-lang="en">Reg. No. 2023/C22040</span></div>
         </div>
       </div>
       <div class="contact-item">
@@ -1480,27 +1479,27 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
         <div>
           <div class="ci-label"><span data-lang="fr">Téléphone / WhatsApp</span><span data-lang="en">Phone / WhatsApp</span></div>
           <div class="ci-value">+220 7010004<br>+220 3344652</div></div></div>
-      <div class="contact-item"><div class="contact-icon">🎓</div><div><div class="ci-label">Inscription académie</div><div class="ci-value"><a href="#inscription" style="color:var(--or);"><span data-lang="fr">↑ Formulaire d'inscription</span><span data-lang="en">↑ Enrollment Form</span></a></div></div></div>
+      <div class="contact-item"><div class="contact-icon">🎓</div><div><div class="ci-label"><span data-lang="fr">Inscription académie</span><span data-lang="en">Academy enrolment</span></div><div class="ci-value"><a href="#inscription" style="color:var(--or);"><span data-lang="fr">↑ Formulaire d'inscription</span><span data-lang="en">↑ Enrollment Form</span></a></div></div></div>
     </div>
   </div>
   <div class="fade-in" style="transition-delay:0.15s;">
     <div class="contact-form-dark">
       <div class="form-row-2">
-        <div class="form-group"><label>Prénom</label><input type="text" placeholder="Prénom"></div>
-        <div class="form-group"><label>Nom</label><input type="text" placeholder="Nom"></div>
+        <div class="form-group"><label><span data-lang="fr">Prénom</span><span data-lang="en">First name</span></label><input type="text" placeholder="Prénom" data-ph-fr="Prénom" data-ph-en="First name"></div>
+        <div class="form-group"><label><span data-lang="fr">Nom</span><span data-lang="en">Last name</span></label><input type="text" placeholder="Nom" data-ph-fr="Nom" data-ph-en="Last name"></div>
       </div>
-      <div class="form-group"><label>Email ou WhatsApp</label><input type="text" placeholder="email ou +220 7010004"></div>
-      <div class="form-group"><label>Objet</label>
+      <div class="form-group"><label><span data-lang="fr">Email ou WhatsApp</span><span data-lang="en">Email or WhatsApp</span></label><input type="text" placeholder="email ou +220 7010004" data-ph-fr="email ou +220 7010004" data-ph-en="email or +220 7010004"></div>
+      <div class="form-group"><label><span data-lang="fr">Objet</span><span data-lang="en">Subject</span></label>
         <select>
-          <option value="">Choisir...</option>
-          <option>Commande vêtement sur mesure</option>
-          <option>Broderie & personnalisation</option>
-          <option data-fr="Pressing / Entretien" data-en="Pressing / Care"><span data-lang="fr">Pressing / Entretien</span><span data-lang="en">Pressing / Care</span></option>
-          <option>Partenariat institutionnel</option>
-          <option>Autre demande</option>
+          <option value="" data-fr="Choisir..." data-en="Select...">Choisir...</option>
+          <option data-fr="Commande vêtement sur mesure" data-en="Bespoke garment order">Commande vêtement sur mesure</option>
+          <option data-fr="Broderie &amp; personnalisation" data-en="Embroidery &amp; customisation">Broderie & personnalisation</option>
+          <option data-fr="Pressing / Entretien" data-en="Pressing / Care">Pressing / Entretien</option>
+          <option data-fr="Partenariat institutionnel" data-en="Institutional partnership">Partenariat institutionnel</option>
+          <option data-fr="Autre demande" data-en="Other request">Autre demande</option>
         </select>
       </div>
-      <div class="form-group"><label>Message</label><textarea placeholder="Votre message..."></textarea></div>
+      <div class="form-group"><label><span data-lang="fr">Message</span><span data-lang="en">Message</span></label><textarea placeholder="Votre message..." data-ph-fr="Votre message..." data-ph-en="Your message..."></textarea></div>
       <button class="btn-submit"><span data-lang="fr">Envoyer →</span><span data-lang="en">Send →</span></button>
     </div>
   </div>
@@ -1509,8 +1508,8 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">DJAMIL <span>/ Academy & Atelier</span></div>
-  <div class="footer-copy">© 2026 Djamil Academy of Fashion Design · Chez Djamil · Bakau New Town, The Gambia · djamilacademy.tiiny.site — All rights reserved</div>
-  <div class="footer-reg">Rég. 2023/C22040</div>
+  <div class="footer-copy">© 2026 Djamil Academy of Fashion Design · Chez Djamil · Bakau New Town, The Gambia · djamilacademy.tiiny.site <span data-lang="fr">— Tous droits réservés</span><span data-lang="en">— All rights reserved</span></div>
+  <div class="footer-reg"><span data-lang="fr">Rég. 2023/C22040</span><span data-lang="en">Reg. 2023/C22040</span></div>
 </footer>
 
 <script>
@@ -1846,6 +1845,10 @@ function applyTranslations(lang){
   document.querySelectorAll('option[data-fr]').forEach(function(o){
     var t = (lang === 'en') ? o.getAttribute('data-en') : o.getAttribute('data-fr');
     if (t) o.textContent = t;
+  });
+  document.querySelectorAll('[data-ph-fr]').forEach(function(i){
+    var t = (lang === 'en') ? i.getAttribute('data-ph-en') : i.getAttribute('data-ph-fr');
+    if (t) i.setAttribute('placeholder', t);
   });
   var sel = document.getElementById('languageSelect');
   if (sel) sel.value = lang;
