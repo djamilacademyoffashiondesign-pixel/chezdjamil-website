@@ -325,6 +325,27 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
   .itc-highlight{flex-direction:column;padding:20px;}
   footer{flex-direction:column;gap:10px;text-align:center;}
 }
+
+/* CAHIERS DE L'ÉLÈVE */
+.cahiers{background:var(--blanc);padding:90px 6%;}
+.cahiers-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:40px;}
+.cahier-box{background:var(--creme);padding:28px;border-top:3px solid var(--or);}
+.cahier-tag{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--or);margin-bottom:6px;}
+.cahier-titre{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--noir);margin-bottom:8px;}
+.cahier-desc{font-size:14px;color:var(--gris);line-height:1.7;margin-bottom:18px;}
+.cahier-cover{display:block;width:100%;max-width:340px;margin:0 auto 16px;box-shadow:0 18px 40px rgba(0,0,0,.18);cursor:zoom-in;border:0;padding:0;background:none;}
+.cahier-cover img,.cahier-pages img{width:100%;height:auto;display:block;}
+.cahier-pages{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.cahier-pages button{border:1px solid rgba(0,0,0,.08);padding:0;background:#fff;cursor:zoom-in;}
+.cahier-note{font-size:12px;color:var(--gris);margin-top:12px;text-align:center;}
+.cahier-lb{position:fixed;inset:0;background:rgba(14,13,11,.92);display:none;align-items:center;justify-content:center;z-index:9999;padding:16px;}
+.cahier-lb.on{display:flex;}
+.cahier-lb img{max-width:100%;max-height:88vh;box-shadow:0 10px 40px rgba(0,0,0,.5);}
+.cahier-lb .lb-btn{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;font-size:28px;width:48px;height:48px;border-radius:50%;cursor:pointer;}
+.cahier-lb .lb-x{top:16px;right:16px;font-size:22px;}
+.cahier-lb .lb-g{left:12px;top:50%;transform:translateY(-50%);}
+.cahier-lb .lb-d{right:12px;top:50%;transform:translateY(-50%);}
+@media(max-width:800px){.cahiers{padding:60px 16px;}.cahiers-grid{grid-template-columns:1fr;gap:32px;}.cahier-box{padding:20px;}}
 </style>
 
 <script type="application/ld+json">
@@ -402,6 +423,7 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
 </a>
   <ul class="nav-links">
     <li><a href="#academie"><span data-lang="fr">Académie</span><span data-lang="en">Academy</span></a></li>
+    <li><a href="#cahiers"><span data-lang="fr">Cahiers</span><span data-lang="en">Workbooks</span></a></li>
     <li><a href="#eleves"><span data-lang="fr">Élèves</span><span data-lang="en">Students</span></a></li>
     <li><a href="#boutique"><span data-lang="fr">Boutique</span><span data-lang="en">Shop</span></a></li>
     <li><a href="#atelier">Chez Djamil</a></li>
@@ -505,6 +527,47 @@ footer { background:#060605; padding:36px 60px; display:flex; justify-content:sp
     </div>
   </div>
 </section>
+
+<!-- CAHIERS DE L'ÉLÈVE -->
+<section class="cahiers" id="cahiers">
+  <div class="fade-in">
+    <div class="eyebrow"><span data-lang="fr">Le programme, page par page</span><span data-lang="en">The programme, page by page</span></div>
+    <h2 class="sec-title"><span data-lang="fr">Nos cahiers <em>de l'élève</em></span><span data-lang="en">Our student <em>workbooks</em></span></h2>
+    <p class="sec-intro"><span data-lang="fr">Chaque trimestre, l'élève reçoit son cahier : le programme jour par jour, des dessins pour chaque technique, ses mesures, ses notes et la note du jour du professeur. Il l'apporte à chaque cours. Voici la couverture et quelques pages.</span><span data-lang="en">Every term, each student receives a workbook: the day-by-day programme, a drawing for every technique, their measurements, their notes and the teacher's daily mark. They bring it to every class. Here are the cover and a few pages.</span></p>
+  </div>
+  <div class="cahiers-grid">
+    <div class="cahier-box fade-in">
+      <div class="cahier-tag"><span data-lang="fr">1re année · Trimestre 1</span><span data-lang="en">Year 1 · Term 1</span></div>
+      <div class="cahier-titre"><span data-lang="fr">Les bases du métier</span><span data-lang="en">The basics of the trade</span></div>
+      <p class="cahier-desc"><span data-lang="fr">Prise des 20 mesures, outils, points à la main, machine à coudre, coutures de base. Une semaine = une double page : la leçon à gauche, les notes et l'échantillon de tissu à droite.</span><span data-lang="en">Taking the 20 measurements, tools, hand stitches, the sewing machine, basic seams. One week = one double page: the lesson on the left, notes and fabric sample on the right.</span></p>
+      <button type="button" class="cahier-cover" onclick="cahierOuvrir('a1',0)" aria-label="Couverture"><img loading="lazy" decoding="async" src="cahier-a1-1.webp" alt="Couverture du cahier 1re année"></button>
+      <div class="cahier-pages"><button type="button" onclick="cahierOuvrir('a1',1)" aria-label="Page 2"><img loading="lazy" decoding="async" src="cahier-a1-2.webp" alt="Fiche de mesures"></button><button type="button" onclick="cahierOuvrir('a1',2)" aria-label="Page 3"><img loading="lazy" decoding="async" src="cahier-a1-3.webp" alt="Semaine 1 – découverte du métier"></button><button type="button" onclick="cahierOuvrir('a1',3)" aria-label="Page 4"><img loading="lazy" decoding="async" src="cahier-a1-4.webp" alt="Semaine 2 – couture à la main"></button></div>
+    </div>
+    <div class="cahier-box fade-in">
+      <div class="cahier-tag"><span data-lang="fr">2e année · Trimestre 1</span><span data-lang="en">Year 2 · Term 1</span></div>
+      <div class="cahier-titre"><span data-lang="fr">Devenir tailleur</span><span data-lang="en">Becoming a tailor</span></div>
+      <p class="cahier-desc"><span data-lang="fr">12 semaines, 48 séances : chemises, pantalons, jupes, robes, kaba, senator, veste. Pour chaque vêtement : le patron complet, le tableau des règles, l'ordre de montage et le contrôle qualité.</span><span data-lang="en">12 weeks, 48 sessions: shirts, trousers, skirts, dresses, kaba, senator, jacket. For every garment: the full pattern, the rules table, the order of sewing and a quality check.</span></p>
+      <button type="button" class="cahier-cover" onclick="cahierOuvrir('a2',0)" aria-label="Couverture"><img loading="lazy" decoding="async" src="cahier-a2-1.webp" alt="Couverture du cahier 2e année"></button>
+      <div class="cahier-pages"><button type="button" onclick="cahierOuvrir('a2',1)" aria-label="Page 2"><img loading="lazy" decoding="async" src="cahier-a2-2.webp" alt="Le trimestre en un coup d'œil"></button><button type="button" onclick="cahierOuvrir('a2',2)" aria-label="Page 3"><img loading="lazy" decoding="async" src="cahier-a2-3.webp" alt="Chemise homme – patron complet"></button><button type="button" onclick="cahierOuvrir('a2',3)" aria-label="Page 4"><img loading="lazy" decoding="async" src="cahier-a2-4.webp" alt="Robe épaules dénudées – patron"></button></div>
+    </div>
+  </div>
+  <p class="cahier-note"><span data-lang="fr">Touchez une page pour l'agrandir. Le cahier complet est remis aux élèves inscrits.</span><span data-lang="en">Tap a page to enlarge it. The full workbook is given to enrolled students.</span></p>
+  <div style="text-align:center;margin-top:20px;"><a href="#inscription" class="btn-primary"><span data-lang="fr">S'inscrire à l'académie</span><span data-lang="en">Enroll in the Academy</span></a></div>
+</section>
+<div class="cahier-lb" id="cahierLb" onclick="if(event.target===this)cahierFermer()">
+  <button type="button" class="lb-btn lb-x" onclick="cahierFermer()" aria-label="Fermer">✕</button>
+  <button type="button" class="lb-btn lb-g" onclick="cahierPas(-1)" aria-label="Précédente">‹</button>
+  <img id="cahierLbImg" src="" alt="">
+  <button type="button" class="lb-btn lb-d" onclick="cahierPas(1)" aria-label="Suivante">›</button>
+</div>
+<script>
+var cahierCode="a1",cahierIdx=0;
+function cahierMontrer(){document.getElementById("cahierLbImg").src="cahier-"+cahierCode+"-"+(cahierIdx+1)+".webp";}
+function cahierOuvrir(c,n){cahierCode=c;cahierIdx=n;cahierMontrer();document.getElementById("cahierLb").classList.add("on");}
+function cahierFermer(){document.getElementById("cahierLb").classList.remove("on");}
+function cahierPas(d){cahierIdx=(cahierIdx+d+4)%4;cahierMontrer();}
+document.addEventListener("keydown",function(e){if(!document.getElementById("cahierLb").classList.contains("on"))return;if(e.key==="Escape")cahierFermer();if(e.key==="ArrowRight")cahierPas(1);if(e.key==="ArrowLeft")cahierPas(-1);});
+</script>
 
 <div class="divider"></div>
 
