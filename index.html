@@ -195,6 +195,19 @@ body.menu .burger span:nth-child(3){top:17px;transform:rotate(-45deg)}
 .vacances li{font-size:14.5px;color:rgba(245,240,232,.88);padding-left:22px;position:relative}
 .vacances li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:1px;background:var(--or)}
 .vacances svg{width:100%;height:auto;display:block}
+.master{margin-top:40px;border:1px solid var(--or);outline:1px solid var(--or);outline-offset:8px;background:var(--papier);padding:56px;position:relative}
+.master .badge{display:inline-block;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--or);border:1px solid var(--or);padding:7px 12px;font-weight:600;margin-bottom:22px}
+.master h3{font-family:var(--serif);font-size:38px;line-height:1.15;font-weight:400;margin:0 0 16px}
+.master h3 em{color:var(--or);font-style:italic}
+.master .intro{max-width:680px;color:var(--doux);font-size:15.5px;line-height:1.7;margin:0 0 34px}
+.modules{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:34px}
+.module{border-top:2px solid var(--or);padding:22px 4px 0}
+.module .n{font-family:var(--serif);font-style:italic;color:var(--or);font-size:15px}
+.module b{display:block;font-family:var(--serif);font-weight:500;font-size:22px;margin:6px 0 8px}
+.module p{font-size:14px;color:var(--doux);margin:0}
+.master .pied{display:flex;flex-wrap:wrap;align-items:center;gap:18px 30px;padding-top:26px;border-top:1px solid var(--ligne)}
+.master .pied p{margin:0;font-size:14px;color:var(--doux);flex:1;min-width:240px}
+@media (max-width:960px){.master{padding:38px 24px;outline-offset:6px}.master h3{font-size:30px}.modules{grid-template-columns:1fr;gap:18px}}
 @media (max-width:960px){.vacances{grid-template-columns:1fr;padding:40px 28px;gap:34px}.vacances h3{font-size:30px}}
 .infos{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:44px;padding-top:30px;border-top:1px solid var(--ligne);font-size:14.5px;color:var(--doux)}
 .infos b{color:var(--texte);font-weight:600}
@@ -498,6 +511,22 @@ footer a:hover{color:var(--or)}
           <path d="M60 70 l6 14 14 6 -14 6 -6 14 -6 -14 -14 -6 14 -6z" fill="#e2bd72"/>
           <path d="M380 140 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="#e2bd72" opacity=".8"/>
         </svg>
+      </div>
+    </div>
+
+    <!-- Masterclass -->
+    <div class="master rv" id="masterclass">
+      <span class="badge"><span data-lang="fr">Bientôt · Masterclass</span><span data-lang="en">Coming soon · Masterclass</span></span>
+      <h3><span data-lang="fr">Vous savez coudre ? <em>Apprenez à couper comme un maître.</em></span><span data-lang="en">You can already sew? <em>Learn to cut like a master.</em></span></h3>
+      <p class="intro"><span data-lang="fr">Des modules courts, réservés aux couturiers et couturières qui savent déjà coudre et veulent maîtriser une coupe précise, directement sur le tissu, sans patron. Un module, une pièce, une technique : celle qu'on apprend en vingt-cinq ans de métier.</span><span data-lang="en">Short modules for tailors who can already sew and want to master one precise cut, straight onto the fabric, without a paper pattern. One module, one garment, one technique: the kind you learn over twenty-five years in the trade.</span></p>
+      <div class="modules">
+        <div class="module"><span class="n">I</span><b><span data-lang="fr">Le pantalon</span><span data-lang="en">The trouser</span></b><p><span data-lang="fr">Homme et femme : un tombé net, une ceinture juste, des poches bien placées.</span><span data-lang="en">Men's and women's: a clean drape, a perfect waistband, well-placed pockets.</span></p></div>
+        <div class="module"><span class="n">II</span><b><span data-lang="fr">La veste</span><span data-lang="en">The jacket</span></b><p><span data-lang="fr">Épaules, col et manches : la coupe qui fait la différence entre amateur et professionnel.</span><span data-lang="en">Shoulders, collar and sleeves: the cut that separates the amateur from the professional.</span></p></div>
+        <div class="module"><span class="n">III</span><b><span data-lang="fr">Le bustier</span><span data-lang="en">The bustier</span></b><p><span data-lang="fr">Un buste qui épouse le corps, structuré et confortable, pour les tenues de fête.</span><span data-lang="en">A bodice that follows the body, structured and comfortable, for special occasions.</span></p></div>
+      </div>
+      <div class="pied">
+        <p><span data-lang="fr">Places limitées pour que chacun travaille aux côtés du formateur. Dates et tarifs annoncés bientôt : dites-nous quel module vous intéresse.</span><span data-lang="en">Limited places so everyone works side by side with the trainer. Dates and fees coming soon: tell us which module interests you.</span></p>
+        <a class="btn btn-or" href="https://wa.me/2207628683?text=Hello%2C%20I%20can%20already%20sew%20and%20I%20am%20interested%20in%20the%20Djamil%20Academy%20masterclass%20(trouser%20%2F%20jacket%20%2F%20bustier)." target="_blank" rel="noopener"><span data-lang="fr">Je suis intéressé(e)</span><span data-lang="en">I'm interested</span> <span class="fl">→</span></a>
       </div>
     </div>
     <!-- Frais de scolarité -->
