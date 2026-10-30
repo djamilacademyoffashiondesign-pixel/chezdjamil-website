@@ -76,7 +76,7 @@ html:not([lang="en"]) [data-lang="fr"], html[lang="en"] [data-lang="en"]{display
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:var(--sans);font-weight:400;color:var(--texte);background:var(--papier);line-height:1.7;font-size:16px;overflow-x:hidden}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 28px}
 section{position:relative}
@@ -173,7 +173,7 @@ body.menu .burger span:nth-child(3){top:17px;transform:rotate(-45deg)}
 .photo-bord{position:relative}
 .photo-bord::after{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid var(--or);z-index:-1}
 .photo-bord figure{overflow:hidden}
-.photo-bord img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.photo-bord img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center 30%}
 .legende{font-size:12px;color:var(--doux);margin-top:14px;letter-spacing:.04em}
 .dark .legende{color:rgba(236,230,219,.5)}
 .classes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:90px}
@@ -224,11 +224,10 @@ body.menu .burger span:nth-child(3){top:17px;transform:rotate(-45deg)}
 .etape+.etape{padding-left:30px;border-left:1px solid var(--ligne)}
 .etape .num{font-size:40px;margin-bottom:12px}
 .etape p{font-size:14.5px;color:var(--doux)}
-.tarifs{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.tarifs{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 40px}
 .tarif h4{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--or);font-weight:600;margin-bottom:12px}
 .ligne-t{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px dotted rgba(42,37,32,.25);font-size:15px}
 .ligne-t b{font-family:var(--serif);font-size:21px;font-weight:500}
-.ligne-t b.vert{color:#2f6b3f}
 .pressing-bas{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;margin-top:50px;padding:34px 40px;background:var(--noir);color:#fff}
 .pressing-bas p{font-size:15px;color:rgba(255,255,255,.7)}
 .pressing-bas p b{color:#fff;font-weight:500}
@@ -299,12 +298,11 @@ footer a:hover{color:var(--or)}
   .hero-img{order:-1;margin-right:26px}
   .chiffres{gap:22px;margin-top:44px}
   .chiffres div b{font-size:34px}
-  .photo-bord img{aspect-ratio:auto}
-  #atelier figure img{aspect-ratio:4/3!important}
   .classes{grid-template-columns:1fr;margin-top:60px}
   .etapes{grid-template-columns:1fr}
   .etape+.etape{padding-left:0;border-left:0;border-top:1px solid var(--ligne)}
-  .tarifs,.refs{grid-template-columns:1fr}
+  .tarifs{grid-template-columns:1fr 1fr;gap:36px 28px}
+  .refs{grid-template-columns:1fr}
   .fondateur .photo,.insc-gauche{position:static}
   .form{padding:34px 22px}
   .photo-bord{margin:0 0 0 18px}
@@ -319,6 +317,7 @@ footer a:hover{color:var(--or)}
   .r2{grid-template-columns:1fr;gap:0}
   .chiffres .lab{font-size:10px;letter-spacing:.12em}
   .pressing-bas{padding:28px 22px}
+  .tarifs{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -405,8 +404,8 @@ footer a:hover{color:var(--or)}
         </div>
       </div>
       <div class="photo-bord rv d2">
-        <figure class="img-rv"><img src="eleves-dafd.webp" alt="Les élèves de DAFD Académie avec leur formateur" loading="lazy" width="1080" height="470"></figure>
-        <p class="legende"><span data-lang="fr">Les élèves de l'académie, en blouse jaune, avec leur formateur.</span><span data-lang="en">Academy students, in their yellow coats, with their trainer.</span></p>
+        <figure class="img-rv"><img src="mesure-atelier.webp" alt="Une élève de DAFD Académie pendant un cours avec son formateur" loading="lazy" width="1080" height="510"></figure>
+        <p class="legende"><span data-lang="fr">En cours à l'académie : chaque geste s'apprend aux côtés du formateur.</span><span data-lang="en">In class at the academy: every skill is learned alongside the trainer.</span></p>
       </div>
     </div>
 
@@ -490,8 +489,7 @@ footer a:hover{color:var(--or)}
         <div style="margin-top:40px" class="rv"><a class="btn btn-or" href="https://wa.me/2207628683?text=Hello%20Chez%20Djamil%2C%20I%20would%20like%20to%20order%20a%20garment." target="_blank" rel="noopener"><span data-lang="fr">Commander sur WhatsApp</span><span data-lang="en">Order on WhatsApp</span> <span class="fl">→</span></a></div>
       </div>
       <div class="rv d2">
-        <figure class="img-rv"><img src="mesure-atelier.webp" alt="Prise de mesures à l'atelier" loading="lazy" width="1080" height="510" style="aspect-ratio:4/3.4;object-fit:cover;width:100%"></figure>
-        <p class="citation"><span data-lang="fr">« La mode africaine n'est pas une tendance. C'est un héritage vivant que nous habillons chaque jour. »</span><span data-lang="en">“African fashion is not a trend. It is a living heritage we dress every day.”</span></p>
+        <p class="citation" style="font-size:clamp(30px,3.4vw,44px);margin-top:0;border-left:1px solid var(--or);padding-left:30px"><span data-lang="fr">« La mode africaine n'est pas une tendance. C'est un héritage vivant que nous habillons chaque jour. »</span><span data-lang="en">“African fashion is not a trend. It is a living heritage we dress every day.”</span></p>
         <span class="signature">Moriba « Djamil » Traoré</span>
       </div>
     </div>
@@ -507,29 +505,61 @@ footer a:hover{color:var(--or)}
   <div class="wrap">
     <div class="eyebrow rv"><span data-lang="fr">Pressing & livraison</span><span data-lang="en">Pressing & delivery</span></div>
     <h2 class="rv d1"><span data-lang="fr">Vos vêtements, <em>repassés et rapportés.</em></span><span data-lang="en">Your clothes, <em>pressed and brought back.</em></span></h2>
-    <p class="lead rv d2"><span data-lang="fr">Nous venons chercher vos vêtements, nous les repassons avec soin et nous vous les rapportons en 24 à 48 heures.</span><span data-lang="en">We collect your clothes, press them with care and bring them back within 24 to 48 hours.</span></p>
+    <p class="lead rv d2"><span data-lang="fr">Nous venons chercher vos vêtements, nous les nettoyons et les repassons avec soin, puis nous vous les rapportons en 24 à 48 heures.</span><span data-lang="en">We collect your clothes, clean and press them with care, and bring them back within 24 to 48 hours.</span></p>
     <div class="etapes">
-      <div class="etape rv"><span class="num">01</span><h3><span data-lang="fr">Collecte</span><span data-lang="en">Collection</span></h3><p><span data-lang="fr">Nous passons chez vous, gratuitement.</span><span data-lang="en">We come to you, free of charge.</span></p></div>
-      <div class="etape rv d1"><span class="num">02</span><h3>Pressing</h3><p><span data-lang="fr">Repassage professionnel, pièce par pièce.</span><span data-lang="en">Professional pressing, item by item.</span></p></div>
+      <div class="etape rv"><span class="num">01</span><h3><span data-lang="fr">Collecte</span><span data-lang="en">Collection</span></h3><p><span data-lang="fr">Nous passons chercher vos vêtements chez vous.</span><span data-lang="en">We pick up your clothes at your home.</span></p></div>
+      <div class="etape rv d1"><span class="num">02</span><h3>Pressing</h3><p><span data-lang="fr">Nettoyage et repassage, pièce par pièce.</span><span data-lang="en">Cleaning and pressing, item by item.</span></p></div>
       <div class="etape rv d2"><span class="num">03</span><h3><span data-lang="fr">Livraison</span><span data-lang="en">Delivery</span></h3><p><span data-lang="fr">Vos vêtements reviennent prêts à porter.</span><span data-lang="en">Your clothes come back ready to wear.</span></p></div>
     </div>
     <div class="tarifs">
       <div class="tarif rv">
-        <h4><span data-lang="fr">Tarifs à la pièce</span><span data-lang="en">Price per item</span></h4>
-        <div class="ligne-t"><span><span data-lang="fr">Chemise</span><span data-lang="en">Shirt</span></span><b>25 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Pantalon</span><span data-lang="en">Trousers</span></span><b>30 D</b></div>
-        <div class="ligne-t"><span>Boubou</span><b>50 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Robe de soirée</span><span data-lang="en">Evening gown</span></span><b>60 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Costume</span><span data-lang="en">Suit</span></span><b>80 D</b></div>
+        <h4><span data-lang="fr">Costumes & vestes</span><span data-lang="en">Suits &amp; jackets</span></h4>
+        <div class="ligne-t"><span><span data-lang="fr">Costume complet + pantalon</span><span data-lang="en">Full suit and trousers</span></span><b>450 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Costume seul</span><span data-lang="en">Suit only</span></span><b>300 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Veste</span><span data-lang="en">Jacket</span></span><b>350 D</b></div>
       </div>
       <div class="tarif rv d1">
-        <h4><span data-lang="fr">Livraison</span><span data-lang="en">Delivery</span></h4>
-        <div class="ligne-t"><span><span data-lang="fr">Bakau (dépôt)</span><span data-lang="en">Bakau (drop-off)</span></span><b class="vert"><span data-lang="fr">Gratuit</span><span data-lang="en">Free</span></b></div>
-        <div class="ligne-t"><span>Serrekunda</span><b>50 D</b></div>
-        <div class="ligne-t"><span>Banjul / Kololi</span><b>75 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Autres zones</span><span data-lang="en">Other areas</span></span><b><span data-lang="fr">Sur devis</span><span data-lang="en">On quote</span></b></div>
+        <h4><span data-lang="fr">Tenues africaines</span><span data-lang="en">African wear</span></h4>
+        <div class="ligne-t"><span><span data-lang="fr">Robe africaine longue</span><span data-lang="en">African full dress</span></span><b>350 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Robe africaine courte</span><span data-lang="en">African dress, short</span></span><b>300 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Kaftan homme long</span><span data-lang="en">Men's long kaftan</span></span><b>350 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Tenue homme manches courtes</span><span data-lang="en">Men's short sleeve</span></span><b>300 D</b></div>
+      </div>
+      <div class="tarif rv d2">
+        <h4><span data-lang="fr">Robes</span><span data-lang="en">Dresses &amp; gowns</span></h4>
+        <div class="ligne-t"><span><span data-lang="fr">Robe européenne</span><span data-lang="en">European dress</span></span><b>500 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Robe de soirée</span><span data-lang="en">Gown</span></span><b>350 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Robe en dentelle</span><span data-lang="en">Lace dress</span></span><b>450 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Robe longue</span><span data-lang="en">Long lady dress</span></span><b>250 D</b></div>
+      </div>
+      <div class="tarif rv">
+        <h4><span data-lang="fr">Hauts & bas</span><span data-lang="en">Tops &amp; bottoms</span></h4>
+        <div class="ligne-t"><span><span data-lang="fr">T-shirt manches longues</span><span data-lang="en">Long sleeve T-shirt</span></span><b>100 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">T-shirt manches courtes</span><span data-lang="en">Short sleeve T-shirt</span></span><b>75 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Chemise</span><span data-lang="en">Shirt</span></span><b>100 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Pantalon</span><span data-lang="en">Trousers</span></span><b>150 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Jean</span><span data-lang="en">Jeans</span></span><b>150 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Jupe</span><span data-lang="en">Skirt</span></span><b>100 D</b></div>
+      </div>
+      <div class="tarif rv d1">
+        <h4><span data-lang="fr">Linge de maison</span><span data-lang="en">Bedding &amp; curtains</span></h4>
+        <div class="ligne-t"><span><span data-lang="fr">Grand drap</span><span data-lang="en">Bed sheet, big</span></span><b>1 500 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Petit drap</span><span data-lang="en">Bed sheet, small</span></span><b>800 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Taie d'oreiller</span><span data-lang="en">Pillow case</span></span><b>50 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Grande couverture</span><span data-lang="en">Blanket, big</span></span><b>800 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Petite couverture</span><span data-lang="en">Blanket, small</span></span><b>500 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Rideau</span><span data-lang="en">Window curtain</span></span><b>100 D</b></div>
+      </div>
+      <div class="tarif rv d2">
+        <h4><span data-lang="fr">Autres</span><span data-lang="en">Others</span></h4>
+        <div class="ligne-t"><span><span data-lang="fr">Serviette</span><span data-lang="en">Towel</span></span><b>100 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Robe Francky</span><span data-lang="en">Francky dress</span></span><b>650 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Chemise blanche</span><span data-lang="en">White shirt</span></span><b>125 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Chemise manches longues</span><span data-lang="en">Long sleeve shirt</span></span><b>150 D</b></div>
+        <div class="ligne-t"><span><span data-lang="fr">Pantalon homme blanc</span><span data-lang="en">Men's white trousers</span></span><b>200 D</b></div>
       </div>
     </div>
+    <p class="legende rv" style="margin-top:22px"><span data-lang="fr">Prix à la pièce, en dalasis. Collecte et livraison : tarif selon la zone, demandez-nous sur WhatsApp.</span><span data-lang="en">Prices per item, in dalasis. Pickup and delivery: price depends on the area, ask us on WhatsApp.</span></p>
     <div class="pressing-bas rv">
       <p><b><span data-lang="fr">Paiement à la livraison ou par Wave.</span><span data-lang="en">Pay on delivery or with Wave.</span></b><br><span data-lang="fr">Pour une commande urgente, appelez-nous directement.</span><span data-lang="en">For urgent orders, call us directly.</span></p>
       <button class="btn btn-or" type="button" onclick="commanderPressing()"><span data-lang="fr">Commander le pressing</span><span data-lang="en">Book a pickup</span> <span class="fl">→</span></button>
