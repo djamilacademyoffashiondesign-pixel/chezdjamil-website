@@ -212,6 +212,25 @@ body.menu .burger span:nth-child(3){top:17px;transform:rotate(-45deg)}
 .infos{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:44px;padding-top:30px;border-top:1px solid var(--ligne);font-size:14.5px;color:var(--doux)}
 .infos b{color:var(--texte);font-weight:600}
 
+
+/* ---------- Programme ---------- */
+.annees{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:60px}
+.annee{border-top:2px solid var(--or);padding-top:28px}
+.annee .quand{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--or);font-weight:600}
+.annee h3{font-size:32px;margin:8px 0 18px}
+.tri{display:grid;grid-template-columns:52px 1fr;padding:18px 0;border-bottom:1px solid var(--ligne)}
+.tri .tn{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--or)}
+.tri b{display:block;font-size:15.5px;font-weight:600;margin-bottom:3px}
+.tri p{font-size:14.5px;color:var(--doux);line-height:1.6}
+.piliers{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:70px;border-top:1px solid var(--ligne);border-bottom:1px solid var(--ligne)}
+.piliers div{padding:30px 26px 30px 0}
+.piliers div+div{padding-left:26px;border-left:1px solid var(--ligne)}
+.piliers b{display:block;font-family:var(--serif);font-size:22px;font-weight:500;margin-bottom:6px}
+.piliers p{font-size:14px;color:var(--doux)}
+.atouts{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:60px}
+.atouts div{background:var(--noir);color:#ece6db;padding:40px 38px}
+.atouts h4{font-family:var(--serif);font-size:26px;font-weight:500;color:#fff;margin-bottom:12px}
+.atouts p{font-size:15px;color:rgba(236,230,219,.7)}
 /* ---------- Cahiers ---------- */
 .cahiers{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:60px}
 .cahier{display:grid;grid-template-columns:.9fr 1fr;gap:28px;align-items:start}
@@ -330,6 +349,11 @@ footer a:hover{color:var(--or)}
   .etapes{grid-template-columns:1fr}
   .etape+.etape{padding-left:0;border-left:0;border-top:1px solid var(--ligne)}
   .tarifs{grid-template-columns:1fr 1fr;gap:36px 28px}
+  .annees,.atouts{grid-template-columns:1fr}
+  .piliers{grid-template-columns:1fr 1fr}
+  .piliers div,.piliers div+div{padding:24px 18px 24px 0;border-left:0}
+  .piliers div:nth-child(even){padding-left:18px;border-left:1px solid var(--ligne)}
+  .atouts div{padding:30px 24px}
   .refs{grid-template-columns:1fr}
   .fondateur .photo,.insc-gauche{position:static}
   .form{padding:34px 22px}
@@ -366,6 +390,7 @@ footer a:hover{color:var(--or)}
     </a>
     <nav class="liens" id="liens">
       <a href="#academie"><span data-lang="fr">L'Académie</span><span data-lang="en">Academy</span></a>
+      <a href="#programme"><span data-lang="fr">Programme</span><span data-lang="en">Programme</span></a>
       <a href="#atelier"><span data-lang="fr">L'Atelier</span><span data-lang="en">Atelier</span></a>
       <a href="#pressing">Pressing</a>
       <a href="#fondateur"><span data-lang="fr">Le fondateur</span><span data-lang="en">Founder</span></a>
@@ -554,8 +579,44 @@ footer a:hover{color:var(--or)}
   </div>
 </section>
 
+
+<!-- ================= PROGRAMME ================= -->
+<section class="sec" id="programme">
+  <div class="wrap">
+    <div class="eyebrow rv"><span data-lang="fr">Ce que nous enseignons</span><span data-lang="en">What we teach</span></div>
+    <h2 class="rv d1"><span data-lang="fr">Deux ans pour devenir <em>styliste-modéliste.</em></span><span data-lang="en">Two years to become a <em>designer and pattern-maker.</em></span></h2>
+    <p class="lead rv d2"><span data-lang="fr">Des formateurs expérimentés, sous la direction de Moriba « Djamil » Traoré, accompagnent chaque élève du premier point à la main jusqu'à la robe de mariée. On apprend en faisant : chaque semaine, un vrai vêtement est coupé et cousu.</span><span data-lang="en">Experienced trainers, led by Moriba “Djamil” Traoré, guide every student from the first hand stitch to the wedding dress. We learn by doing: every week, a real garment is cut and sewn.</span></p>
+    <div class="annees">
+      <div class="annee rv">
+        <span class="quand"><span data-lang="fr">1re année</span><span data-lang="en">Year 1</span></span>
+        <h3><span data-lang="fr">Les bases du métier</span><span data-lang="en">The foundations</span></h3>
+        <div class="tri"><span class="tn">T1</span><div><b><span data-lang="fr">Mesurer et coudre</span><span data-lang="en">Measure and sew</span></b><p><span data-lang="fr">Les 20 mesures et leurs règles de division, les outils, les points à la main, la machine et les coutures de base.</span><span data-lang="en">The 20 measurements and how to divide them, tools, hand stitches, the machine and basic seams.</span></p></div></div>
+        <div class="tri"><span class="tn">T2</span><div><b><span data-lang="fr">Couper</span><span data-lang="en">Cut</span></b><p><span data-lang="fr">La coupe à main levée et la coupe sur patron : jupe, pantalon, chemise.</span><span data-lang="en">Freehand cutting and cutting from a pattern: skirt, trousers, shirt.</span></p></div></div>
+        <div class="tri"><span class="tn">T3</span><div><b><span data-lang="fr">Assembler et finir</span><span data-lang="en">Assemble and finish</span></b><p><span data-lang="fr">Premiers vêtements complets, cols, manches, fermetures et finitions propres.</span><span data-lang="en">First complete garments, collars, sleeves, fastenings and clean finishes.</span></p></div></div>
+      </div>
+      <div class="annee rv d1">
+        <span class="quand"><span data-lang="fr">2e année</span><span data-lang="en">Year 2</span></span>
+        <h3><span data-lang="fr">Devenir tailleur</span><span data-lang="en">Becoming a tailor</span></h3>
+        <div class="tri"><span class="tn">T1</span><div><b><span data-lang="fr">La précision</span><span data-lang="en">Precision</span></b><p><span data-lang="fr">Corsage de base, chemise, pantalon à bandes et poches, robe, kaba, senator, veste.</span><span data-lang="en">Basic bodice, shirt, trousers with bands and pockets, dress, kaba, senator, jacket.</span></p></div></div>
+        <div class="tri"><span class="tn">T2</span><div><b><span data-lang="fr">La structure</span><span data-lang="en">Structure</span></b><p><span data-lang="fr">Bustier, corset, découpes princesse et baleines : les vêtements qui tiennent seuls.</span><span data-lang="en">Bustier, corset, princess seams and boning: garments that hold their shape.</span></p></div></div>
+        <div class="tri"><span class="tn">T3</span><div><b><span data-lang="fr">La haute couture</span><span data-lang="en">Haute couture</span></b><p><span data-lang="fr">Robes de soirée et de cérémonie, dentelle, jupons, et la robe de mariée à l'examen final.</span><span data-lang="en">Evening and ceremony gowns, lace, petticoats, and the wedding dress at the final exam.</span></p></div></div>
+      </div>
+    </div>
+    <div class="piliers">
+      <div class="rv"><span class="num">I</span><b><span data-lang="fr">Coupe à main levée</span><span data-lang="en">Freehand cutting</span></b><p><span data-lang="fr">Couper directement dans le tissu, avec les mesures et la craie.</span><span data-lang="en">Cutting straight into the fabric, with measurements and chalk.</span></p></div>
+      <div class="rv d1"><span class="num">II</span><b><span data-lang="fr">Coupe sur patron</span><span data-lang="en">Pattern cutting</span></b><p><span data-lang="fr">Tracer le patron, le reporter, couper juste à chaque fois.</span><span data-lang="en">Drafting the pattern, transferring it, cutting accurately every time.</span></p></div>
+      <div class="rv d2"><span class="num">III</span><b><span data-lang="fr">Haute couture</span><span data-lang="en">Haute couture</span></b><p><span data-lang="fr">Volumes, dentelle, bustiers, robes de cérémonie et de mariée.</span><span data-lang="en">Volume, lace, bustiers, ceremony and wedding gowns.</span></p></div>
+      <div class="rv d3"><span class="num">IV</span><b><span data-lang="fr">Finitions</span><span data-lang="en">Finishing</span></b><p><span data-lang="fr">Ourlets, roulottés, boutonnières, repassage : le détail qui fait la différence.</span><span data-lang="en">Hems, rolled edges, buttonholes, pressing: the detail that makes the difference.</span></p></div>
+    </div>
+    <div class="atouts">
+      <div class="rv"><h4><span data-lang="fr">Un suivi chaque semaine</span><span data-lang="en">Followed every week</span></h4><p><span data-lang="fr">Dans son cahier, l'élève garde ses mesures, ses échantillons et ses notes. Chaque semaine, le formateur y note son travail : élève et parents voient la progression semaine après semaine. Un bulletin est remis à chaque trimestre, et le passage en 2e année se fait au mérite.</span><span data-lang="en">In their workbook, students keep their measurements, samples and notes. Each week the trainer grades their work, so students and parents can see the progress week after week. A report card is given every term, and moving up to Year 2 is earned on merit.</span></p></div>
+      <div class="rv d1"><h4><span data-lang="fr">Des machines industrielles</span><span data-lang="en">Industrial machines</span></h4><p><span data-lang="fr">Les élèves apprennent sur des machines à coudre industrielles de dernière génération, celles des vrais ateliers, et non sur de petites machines domestiques. L'atelier dispose aussi d'une machine à broder numérique.</span><span data-lang="en">Students learn on the latest industrial sewing machines, the ones used in real workshops, not small household machines. The workshop also has a digital embroidery machine.</span></p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CAHIERS ================= -->
-<section class="sec" id="cahiers">
+<section class="sec creme" id="cahiers">
   <div class="wrap">
     <div class="eyebrow rv"><span data-lang="fr">Le programme, page par page</span><span data-lang="en">The programme, page by page</span></div>
     <h2 class="rv d1"><span data-lang="fr">Le cahier <em>de l'élève</em></span><span data-lang="en">The student <em>workbook</em></span></h2>
