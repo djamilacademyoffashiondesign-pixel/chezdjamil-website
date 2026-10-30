@@ -292,6 +292,22 @@ body.menu .burger span:nth-child(3){top:17px;transform:rotate(-45deg)}
 .frise .an{font-family:var(--serif);font-size:20px;color:var(--or);display:block;line-height:1.2}
 .frise .txt{font-size:14.5px;color:rgba(236,230,219,.65)}
 
+
+/* ---------- Vocation ---------- */
+.vocation{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:start}
+.quals{margin-top:40px}
+.qual{display:grid;grid-template-columns:54px 1fr;padding:20px 0;border-bottom:1px solid var(--ligne-d)}
+.qual:first-child{border-top:1px solid var(--ligne-d)}
+.qual b{grid-column:2;font-family:var(--serif);font-size:24px;font-weight:500;color:#fff}
+.qual p{grid-column:2;font-size:14.5px;color:rgba(236,230,219,.62)}
+.qual .num{grid-row:1/3}
+.cadre-q{border:1px solid var(--or);padding:48px 40px;position:sticky;top:110px;background:linear-gradient(160deg,rgba(200,151,58,.08),transparent 60%)}
+.cadre-q .grande{font-family:var(--serif);font-style:italic;font-size:clamp(30px,3.2vw,42px);line-height:1.2;color:var(--or-clair);margin-bottom:14px}
+.questions{margin-top:36px;padding-top:28px;border-top:1px solid var(--ligne-d)}
+.questions h4{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--or);margin-bottom:14px}
+.questions ol{padding-left:20px;color:#ece6db;font-size:15.5px}
+.questions li{margin-bottom:10px}
+.questions p{color:rgba(236,230,219,.65);font-size:15px;margin:20px 0 24px}
 /* ---------- Inscription ---------- */
 .insc{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
 .insc-gauche{position:sticky;top:110px}
@@ -350,6 +366,8 @@ footer a:hover{color:var(--or)}
   .etape+.etape{padding-left:0;border-left:0;border-top:1px solid var(--ligne)}
   .tarifs{grid-template-columns:1fr 1fr;gap:36px 28px}
   .annees,.atouts{grid-template-columns:1fr}
+  .vocation{grid-template-columns:1fr;gap:50px}
+  .cadre-q{position:static;padding:36px 24px}
   .piliers{grid-template-columns:1fr 1fr}
   .piliers div,.piliers div+div{padding:24px 18px 24px 0;border-left:0}
   .piliers div:nth-child(even){padding-left:18px;border-left:1px solid var(--ligne)}
@@ -768,6 +786,37 @@ footer a:hover{color:var(--or)}
   </div>
 </section>
 
+
+<!-- ================= VOCATION ================= -->
+<section class="sec dark" id="vocation">
+  <div class="wrap">
+    <div class="vocation">
+      <div>
+        <div class="eyebrow rv"><span data-lang="fr">Avant de vous inscrire</span><span data-lang="en">Before you apply</span></div>
+        <h2 class="rv d1"><span data-lang="fr">Ce métier est-il <em>fait pour vous ?</em></span><span data-lang="en">Is this craft <em>made for you?</em></span></h2>
+        <p class="lead rv d2"><span data-lang="fr">Devenir styliste, modéliste ou couturier est un très beau métier. Mais il demande plus que de l'envie : il demande de l'amour pour le travail. Voici ce que nous attendons de chaque élève.</span><span data-lang="en">Becoming a fashion designer, pattern-maker or tailor is a beautiful profession. But it takes more than a wish: it takes love for the work. Here is what we expect from every student.</span></p>
+        <div class="quals"><div class="qual rv"><span class="num">I</span><b><span data-lang="fr">La passion</span><span data-lang="en">Passion</span></b><p><span data-lang="fr">Aimer ce que l'on fait. Tout ce que tu touches doit devenir de l'or.</span><span data-lang="en">Love what you do. Everything you touch must turn to gold.</span></p></div><div class="qual rv d1"><span class="num">II</span><b><span data-lang="fr">La patience</span><span data-lang="en">Patience</span></b><p><span data-lang="fr">Beaucoup de patience. Ce métier ne s'apprend pas en quelques semaines.</span><span data-lang="en">A lot of patience. This craft is not learned in a few weeks.</span></p></div><div class="qual rv d2"><span class="num">III</span><b><span data-lang="fr">L'œil du créateur</span><span data-lang="en">A designer's eye</span></b><p><span data-lang="fr">Voir le vêtement avant qu'il existe, et savoir comment le couper.</span><span data-lang="en">Seeing the garment before it exists, and knowing how to cut it.</span></p></div><div class="qual rv"><span class="num">IV</span><b><span data-lang="fr">Le goût du travail bien fini</span><span data-lang="en">A taste for fine work</span></b><p><span data-lang="fr">Aimer les belles choses et les habits parfaitement finis, jusqu'au dernier point.</span><span data-lang="en">Loving beautiful things and perfectly finished clothes, down to the last stitch.</span></p></div><div class="qual rv d1"><span class="num">V</span><b><span data-lang="fr">Le courage</span><span data-lang="en">Courage</span></b><p><span data-lang="fr">Se lever tôt, venir chaque semaine pendant deux ans, même fatigué. Tout ce que l'on gagne demande un sacrifice.</span><span data-lang="en">Getting up early, coming every week for two years, even when tired. Everything we gain asks for a sacrifice.</span></p></div></div>
+      </div>
+      <aside class="cadre-q rv d1">
+        <p class="grande"><span data-lang="fr">« Tout ce que tu touches doit devenir de l'or. »</span><span data-lang="en">“Everything you touch must turn to gold.”</span></p>
+        <span class="signature">Moriba « Djamil » Traoré</span>
+        <div class="questions">
+          <h4><span data-lang="fr">Posez-vous ces questions</span><span data-lang="en">Ask yourself these questions</span></h4>
+          <ol>
+            <li><span data-lang="fr">Pourquoi voulez-vous devenir créateur de mode ?</span><span data-lang="en">Why do you want to become a fashion designer?</span></li>
+            <li><span data-lang="fr">Rêvez-vous d'en faire votre métier, ou est-ce un passe-temps ?</span><span data-lang="en">Do you dream of making it your profession, or is it a hobby?</span></li>
+            <li><span data-lang="fr">Qu'est-ce que vous rêvez de créer ? Où vous voyez-vous dans 5 ans ?</span><span data-lang="en">What do you dream of creating? Where do you see yourself in 5 years?</span></li>
+            <li><span data-lang="fr">Quelle classe pouvez-vous suivre chaque semaine, pendant deux ans ?</span><span data-lang="en">Which class can you attend every week, for two years?</span></li>
+            <li><span data-lang="fr">Est-ce votre propre décision ?</span><span data-lang="en">Is it your own decision?</span></li>
+          </ol>
+          <p><span data-lang="fr">Si vos réponses viennent du cœur, votre place est chez nous.</span><span data-lang="en">If your answers come from the heart, your place is with us.</span></p>
+          <a href="#inscription" class="btn btn-or"><span data-lang="fr">Je suis prêt(e)</span><span data-lang="en">I am ready</span> <span class="fl">→</span></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
 <!-- ================= INSCRIPTION ================= -->
 <section class="sec creme" id="inscription">
   <div class="wrap insc">
@@ -813,6 +862,13 @@ footer a:hover{color:var(--or)}
       <div class="fg"><label><span data-lang="fr">Niveau actuel en couture</span><span data-lang="en">Current sewing level</span></label>
         <select id="f-niveau"><option value="" data-fr="Choisir…" data-en="Select…">Choisir…</option><option data-fr="Aucune expérience" data-en="No experience">Aucune expérience</option><option data-fr="Débutant (quelques bases)" data-en="Beginner (some basics)">Débutant (quelques bases)</option><option data-fr="Intermédiaire" data-en="Intermediate">Intermédiaire</option><option data-fr="Avancé" data-en="Advanced">Avancé</option></select></div>
       <div class="fg"><label><span data-lang="fr">Pourquoi voulez-vous devenir styliste ? *</span><span data-lang="en">Why do you want to become a fashion designer? *</span></label><textarea id="f-motivation" data-ph-fr="Avec vos propres mots…" data-ph-en="In your own words…" placeholder="Avec vos propres mots…"></textarea></div>
+
+      <div class="r2">
+        <div class="fg"><label><span data-lang="fr">Pour vous, la couture sera… *</span><span data-lang="en">For you, sewing will be… *</span></label>
+          <select id="f-projet"><option value="" data-fr="Choisir…" data-en="Select…">Choisir…</option><option data-fr="Mon métier" data-en="My profession">Mon métier</option><option data-fr="Un passe-temps" data-en="A hobby">Un passe-temps</option><option data-fr="Je ne sais pas encore" data-en="I don't know yet">Je ne sais pas encore</option></select></div>
+        <div class="fg"><label><span data-lang="fr">Est-ce votre propre décision ? *</span><span data-lang="en">Is it your own decision? *</span></label>
+          <select id="f-decision"><option value="" data-fr="Choisir…" data-en="Select…">Choisir…</option><option data-fr="Oui, c'est mon choix" data-en="Yes, it is my choice">Oui, c'est mon choix</option><option data-fr="Quelqu'un me l'a proposé" data-en="Someone suggested it">Quelqu'un me l'a proposé</option></select></div>
+      </div>
 
       <div class="fs"><span data-lang="fr">Parent ou tuteur <small>(obligatoire avant 18 ans)</small></span><span data-lang="en">Parent or guardian <small>(required under 18)</small></span></div>
       <div class="r2">
@@ -939,11 +995,11 @@ function soumettreInscription(){
   var prenom=v('f-prenom'),nom=v('f-nom'),age=v('f-age'),tel=v('f-tel'),formation=v('f-formation'),motivation=v('f-motivation');
   var parentPrenom=v('f-parent-prenom'),parentNom=v('f-parent-nom'),parentRelation=v('f-parent-relation'),parentTel=v('f-parent-tel'),parentEmail=v('f-parent-email');
   var ePrenom=v('f-emergency-prenom'),eNom=v('f-emergency-nom'),eRel=v('f-emergency-relation'),eTel=v('f-emergency-tel'),payeur=v('f-financial-responsible');
-  var niveau=v('f-niveau'),sexe=v('f-sexe'),email=v('f-email');
+  var niveau=v('f-niveau'),sexe=v('f-sexe'),email=v('f-email'),projet=v('f-projet'),decision=v('f-decision');
   var en=currentLanguage==='en',err=document.getElementById('formErreur'),mineur=parseInt(age,10)<18;
   function erreur(t){err.textContent=t;err.style.display='block';err.scrollIntoView({behavior:'smooth',block:'center'})}
   if(age&&parseInt(age,10)<14)return erreur(en?'Admission is from 14 years old.':"L'admission se fait à partir de 14 ans.");
-  var manque=!prenom||!nom||!age||!tel||!formation||!motivation||!ePrenom||!eNom||!eRel||!eTel||!payeur;
+  var manque=!prenom||!nom||!age||!tel||!formation||!motivation||!projet||!decision||!ePrenom||!eNom||!eRel||!eTel||!payeur;
   if(mineur&&(!parentPrenom||!parentNom||!parentRelation||!parentTel))manque=true;
   if(manque)return erreur(en?'Please fill in all fields marked with *'+(mineur?' (and the parent section, as you are under 18).':'.'):'Merci de remplir tous les champs marqués d’un *'+(mineur?' (et la partie parent, car vous avez moins de 18 ans).':'.'));
   err.style.display='none';
@@ -951,7 +1007,7 @@ function soumettreInscription(){
     '*CANDIDAT*\nNom : '+prenom+' '+nom+'\nÂge : '+age+' ans'+(sexe?' ('+sexe+')':'')+'\nTéléphone : '+tel+'\n'+(email?'Email : '+email+'\n':'')+'Classe : '+formation+'\n\n'+
     ((parentPrenom||parentNom||parentTel)?'*PARENT / TUTEUR*\nNom : '+parentPrenom+' '+parentNom+'\nLien : '+(parentRelation||'-')+'\nTéléphone : '+(parentTel||'-')+'\n'+(parentEmail?'Email : '+parentEmail+'\n':'')+'\n':'')+
     "*CONTACT D'URGENCE*\nNom : "+ePrenom+' '+eNom+'\nLien : '+eRel+'\nTéléphone : '+eTel+'\nQui paie : '+payeur+'\n\n'+
-    '*PARCOURS*\nNiveau en couture : '+(niveau||'Non précisé')+'\nMotivation : '+motivation;
+    '*PARCOURS*\nNiveau en couture : '+(niveau||'Non précisé')+'\nLa couture sera : '+projet+'\nSa propre décision : '+decision+'\nMotivation : '+motivation;
   var lien=WA+encodeURIComponent(msg);
   document.getElementById('waInscription').href=lien;
   var ok=document.getElementById('successMsg');ok.style.display='block';ok.scrollIntoView({behavior:'smooth',block:'center'});
