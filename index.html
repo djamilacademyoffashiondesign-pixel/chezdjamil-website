@@ -228,6 +228,8 @@ body.menu .burger span:nth-child(3){top:17px;transform:rotate(-45deg)}
 .tarif h4{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--or);font-weight:600;margin-bottom:12px}
 .ligne-t{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px dotted rgba(42,37,32,.25);font-size:15px}
 .ligne-t b{font-family:var(--serif);font-size:21px;font-weight:500}
+.ligne-t .nm{flex:1}.ligne-t b{min-width:70px;text-align:right}.ligne-t b.bl{color:var(--doux)}
+.tarif h4{display:flex;align-items:baseline}.tarif h4 .cat{flex:1}.tarif h4 .col{min-width:70px;text-align:right;color:var(--doux);font-weight:500;letter-spacing:.14em}
 .pressing-bas{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;margin-top:50px;padding:34px 40px;background:var(--noir);color:#fff}
 .pressing-bas p{font-size:15px;color:rgba(255,255,255,.7)}
 .pressing-bas p b{color:#fff;font-weight:500}
@@ -513,53 +515,52 @@ footer a:hover{color:var(--or)}
     </div>
     <div class="tarifs">
       <div class="tarif rv">
-        <h4><span data-lang="fr">Costumes & vestes</span><span data-lang="en">Suits &amp; jackets</span></h4>
-        <div class="ligne-t"><span><span data-lang="fr">Costume complet + pantalon</span><span data-lang="en">Full suit and trousers</span></span><b>450 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Costume seul</span><span data-lang="en">Suit only</span></span><b>300 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Veste</span><span data-lang="en">Jacket</span></span><b>350 D</b></div>
+        <h4><span class="cat"><span data-lang="fr">Costumes &amp; vestes</span><span data-lang="en">Suits &amp; jackets</span></span><span class="col"><span data-lang="fr">Couleur</span><span data-lang="en">Colour</span></span><span class="col"><span data-lang="fr">Blanc</span><span data-lang="en">White</span></span></h4>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Costume complet + pantalon</span><span data-lang="en">Full suit and trousers</span></span><b>450 D</b><b class="bl">500 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Veste de costume seule</span><span data-lang="en">Suit jacket only</span></span><b>300 D</b><b class="bl">350 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Veste</span><span data-lang="en">Jacket</span></span><b>350 D</b><b class="bl">—</b></div>
       </div>
       <div class="tarif rv d1">
-        <h4><span data-lang="fr">Tenues africaines</span><span data-lang="en">African wear</span></h4>
-        <div class="ligne-t"><span><span data-lang="fr">Robe africaine longue</span><span data-lang="en">African full dress</span></span><b>350 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Robe africaine courte</span><span data-lang="en">African dress, short</span></span><b>300 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Kaftan homme long</span><span data-lang="en">Men's long kaftan</span></span><b>350 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Tenue homme manches courtes</span><span data-lang="en">Men's short sleeve</span></span><b>300 D</b></div>
+        <h4><span class="cat"><span data-lang="fr">Tenues africaines</span><span data-lang="en">African wear</span></span><span class="col"><span data-lang="fr">Couleur</span><span data-lang="en">Colour</span></span><span class="col"><span data-lang="fr">Blanc</span><span data-lang="en">White</span></span></h4>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Robe africaine manches longues</span><span data-lang="en">African full dress, long sleeve</span></span><b>350 D</b><b class="bl">450 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Robe africaine manches courtes</span><span data-lang="en">African full dress, short sleeve</span></span><b>300 D</b><b class="bl">400 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Kaftan homme manches longues</span><span data-lang="en">Men's long sleeve kaftan</span></span><b>350 D</b><b class="bl">400 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Kaftan homme manches courtes</span><span data-lang="en">Men's short sleeve kaftan</span></span><b>300 D</b><b class="bl">350 D</b></div>
       </div>
       <div class="tarif rv d2">
-        <h4><span data-lang="fr">Robes</span><span data-lang="en">Dresses &amp; gowns</span></h4>
-        <div class="ligne-t"><span><span data-lang="fr">Robe européenne</span><span data-lang="en">European dress</span></span><b>500 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Robe de soirée</span><span data-lang="en">Gown</span></span><b>350 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Robe en dentelle</span><span data-lang="en">Lace dress</span></span><b>450 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Robe longue</span><span data-lang="en">Long lady dress</span></span><b>250 D</b></div>
+        <h4><span class="cat"><span data-lang="fr">Robes</span><span data-lang="en">Dresses &amp; gowns</span></span></h4>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Robe européenne</span><span data-lang="en">European dress</span></span><b>500 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Robe de soirée</span><span data-lang="en">Gown</span></span><b>350 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Robe en dentelle</span><span data-lang="en">Lace dress</span></span><b>450 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Robe longue</span><span data-lang="en">Long lady dress</span></span><b>250 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Robe Francky</span><span data-lang="en">Francky dress</span></span><b>650 D</b></div>
       </div>
       <div class="tarif rv">
-        <h4><span data-lang="fr">Hauts & bas</span><span data-lang="en">Tops &amp; bottoms</span></h4>
-        <div class="ligne-t"><span><span data-lang="fr">T-shirt manches longues</span><span data-lang="en">Long sleeve T-shirt</span></span><b>100 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">T-shirt manches courtes</span><span data-lang="en">Short sleeve T-shirt</span></span><b>75 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Chemise</span><span data-lang="en">Shirt</span></span><b>100 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Pantalon</span><span data-lang="en">Trousers</span></span><b>150 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Jean</span><span data-lang="en">Jeans</span></span><b>150 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Jupe</span><span data-lang="en">Skirt</span></span><b>100 D</b></div>
+        <h4><span class="cat"><span data-lang="fr">Chemises &amp; pantalons</span><span data-lang="en">Shirts &amp; trousers</span></span><span class="col"><span data-lang="fr">Couleur</span><span data-lang="en">Colour</span></span><span class="col"><span data-lang="fr">Blanc</span><span data-lang="en">White</span></span></h4>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Chemise manches longues</span><span data-lang="en">Long sleeve shirt</span></span><b>100 D</b><b class="bl">150 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Chemise manches courtes</span><span data-lang="en">Short sleeve shirt</span></span><b>75 D</b><b class="bl">125 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Pantalon homme</span><span data-lang="en">Men's trousers</span></span><b>150 D</b><b class="bl">200 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Pantalon femme</span><span data-lang="en">Ladies' trousers</span></span><b>150 D</b><b class="bl">200 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Jean</span><span data-lang="en">Jeans</span></span><b>150 D</b><b class="bl">200 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Jupe</span><span data-lang="en">Skirt</span></span><b>100 D</b><b class="bl">—</b></div>
       </div>
       <div class="tarif rv d1">
-        <h4><span data-lang="fr">Linge de maison</span><span data-lang="en">Bedding &amp; curtains</span></h4>
-        <div class="ligne-t"><span><span data-lang="fr">Grand drap</span><span data-lang="en">Bed sheet, big</span></span><b>1 500 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Petit drap</span><span data-lang="en">Bed sheet, small</span></span><b>800 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Taie d'oreiller</span><span data-lang="en">Pillow case</span></span><b>50 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Grande couverture</span><span data-lang="en">Blanket, big</span></span><b>800 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Petite couverture</span><span data-lang="en">Blanket, small</span></span><b>500 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Rideau</span><span data-lang="en">Window curtain</span></span><b>100 D</b></div>
+        <h4><span class="cat"><span data-lang="fr">T-shirts</span><span data-lang="en">T-shirts</span></span></h4>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">T-shirt manches longues</span><span data-lang="en">Long sleeve T-shirt</span></span><b>100 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">T-shirt manches courtes</span><span data-lang="en">Short sleeve T-shirt</span></span><b>75 D</b></div>
       </div>
       <div class="tarif rv d2">
-        <h4><span data-lang="fr">Autres</span><span data-lang="en">Others</span></h4>
-        <div class="ligne-t"><span><span data-lang="fr">Serviette</span><span data-lang="en">Towel</span></span><b>100 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Robe Francky</span><span data-lang="en">Francky dress</span></span><b>650 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Chemise blanche</span><span data-lang="en">White shirt</span></span><b>125 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Chemise manches longues</span><span data-lang="en">Long sleeve shirt</span></span><b>150 D</b></div>
-        <div class="ligne-t"><span><span data-lang="fr">Pantalon homme blanc</span><span data-lang="en">Men's white trousers</span></span><b>200 D</b></div>
+        <h4><span class="cat"><span data-lang="fr">Linge de maison</span><span data-lang="en">Bedding &amp; curtains</span></span></h4>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Grand drap</span><span data-lang="en">Bed sheet, big</span></span><b>1 500 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Petit drap</span><span data-lang="en">Bed sheet, small</span></span><b>800 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Taie d'oreiller</span><span data-lang="en">Pillow case</span></span><b>50 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Grande couverture</span><span data-lang="en">Blanket, big</span></span><b>800 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Petite couverture</span><span data-lang="en">Blanket, small</span></span><b>500 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Rideau</span><span data-lang="en">Window curtain</span></span><b>100 D</b></div>
+        <div class="ligne-t"><span class="nm"><span data-lang="fr">Serviette</span><span data-lang="en">Towel</span></span><b>100 D</b></div>
       </div>
     </div>
-    <p class="legende rv" style="margin-top:22px"><span data-lang="fr">Prix à la pièce, en dalasis. Collecte et livraison : tarif selon la zone, demandez-nous sur WhatsApp.</span><span data-lang="en">Prices per item, in dalasis. Pickup and delivery: price depends on the area, ask us on WhatsApp.</span></p>
+    <p class="legende rv" style="margin-top:22px"><span data-lang="fr">Prix à la pièce, en dalasis. Les vêtements blancs demandent un traitement à part. Collecte et livraison : tarif selon la zone, demandez-nous sur WhatsApp.</span><span data-lang="en">Prices per item, in dalasis. White garments need separate care. Pickup and delivery: price depends on the area, ask us on WhatsApp.</span></p>
     <div class="pressing-bas rv">
       <p><b><span data-lang="fr">Paiement à la livraison ou par Wave.</span><span data-lang="en">Pay on delivery or with Wave.</span></b><br><span data-lang="fr">Pour une commande urgente, appelez-nous directement.</span><span data-lang="en">For urgent orders, call us directly.</span></p>
       <button class="btn btn-or" type="button" onclick="commanderPressing()"><span data-lang="fr">Commander le pressing</span><span data-lang="en">Book a pickup</span> <span class="fl">→</span></button>
