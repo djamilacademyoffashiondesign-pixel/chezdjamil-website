@@ -183,6 +183,19 @@ body.menu .burger span:nth-child(3){top:17px;transform:rotate(-45deg)}
 .classe h3{margin:12px 0 10px}
 .classe .heure{font-family:var(--serif);font-size:22px;margin-bottom:10px}
 .classe p{font-size:14.5px;color:var(--doux)}
+.classe .prix{margin-top:18px;padding-top:16px;border-top:1px solid var(--ligne);display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.classe .prix b{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--texte)}
+.classe .prix span{font-size:12px;letter-spacing:.06em;color:var(--doux)}
+.vacances{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;margin-top:90px;background:var(--noir);color:var(--creme);padding:56px;position:relative;overflow:hidden}
+.vacances .badge{display:inline-block;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--noir);background:var(--or);padding:7px 12px;font-weight:600;margin-bottom:22px}
+.vacances h3{font-family:var(--serif);font-size:38px;line-height:1.15;font-weight:400;margin:0 0 18px;color:var(--creme)}
+.vacances h3 em{color:var(--or-clair);font-style:italic}
+.vacances p{color:rgba(245,240,232,.78);font-size:15.5px;line-height:1.7;margin:0 0 14px}
+.vacances ul{list-style:none;padding:0;margin:18px 0 28px;display:grid;gap:10px}
+.vacances li{font-size:14.5px;color:rgba(245,240,232,.88);padding-left:22px;position:relative}
+.vacances li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:1px;background:var(--or)}
+.vacances svg{width:100%;height:auto;display:block}
+@media (max-width:960px){.vacances{grid-template-columns:1fr;padding:40px 28px;gap:34px}.vacances h3{font-size:30px}}
 .infos{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:44px;padding-top:30px;border-top:1px solid var(--ligne);font-size:14.5px;color:var(--doux)}
 .infos b{color:var(--texte);font-weight:600}
 
@@ -417,24 +430,75 @@ footer a:hover{color:var(--or)}
         <h3><span data-lang="fr">Temps plein</span><span data-lang="en">Full time</span></h3>
         <div class="heure"><span data-lang="fr">Lundi – jeudi · 9h – 14h</span><span data-lang="en">Mon – Thu · 9am – 2pm</span></div>
         <p><span data-lang="fr">Le parcours complet, pour ceux qui veulent faire de la couture leur métier.</span><span data-lang="en">The complete course, for those who want to make tailoring their profession.</span></p>
+        <div class="prix"><b>19 500 D</b><span><span data-lang="fr">par trimestre · 1re année</span><span data-lang="en">per term · year 1</span></span></div>
       </div>
       <div class="classe rv d1">
         <span class="quand"><span data-lang="fr">Classe de l'après-midi</span><span data-lang="en">Afternoon class</span></span>
         <h3><span data-lang="fr">Après l'école ou le travail</span><span data-lang="en">After school or work</span></h3>
         <div class="heure"><span data-lang="fr">Lundi – jeudi · 15h30 – 18h30</span><span data-lang="en">Mon – Thu · 3:30 – 6:30pm</span></div>
         <p><span data-lang="fr">Pour les élèves qui vont à l'école le matin et les personnes occupées en journée.</span><span data-lang="en">For students who attend school in the morning and people busy during the day.</span></p>
+        <div class="prix"><b>19 500 D</b><span><span data-lang="fr">par trimestre · 1re année</span><span data-lang="en">per term · year 1</span></span></div>
       </div>
       <div class="classe rv d2">
         <span class="quand"><span data-lang="fr">Classe du week-end</span><span data-lang="en">Weekend class</span></span>
         <h3><span data-lang="fr">Pour ceux qui travaillent</span><span data-lang="en">For working people</span></h3>
         <div class="heure"><span data-lang="fr">Vendredi – samedi · 9h – 16h</span><span data-lang="en">Fri – Sat · 9am – 4pm</span></div>
         <p><span data-lang="fr">Vous travaillez toute la semaine ? Votre rêve n'a pas besoin d'attendre.</span><span data-lang="en">You work all week? Your dream doesn't have to wait.</span></p>
+        <div class="prix"><b>16 500 D</b><span><span data-lang="fr">par trimestre</span><span data-lang="en">per term</span></span></div>
       </div>
     </div>
     <div class="infos rv">
       <span><b><span data-lang="fr">Dès 14 ans</span><span data-lang="en">From age 14</span></b> · <span data-lang="fr">aucune limite d'âge</span><span data-lang="en">no upper age limit</span></span>
       <span><b><span data-lang="fr">2 ans, 6 trimestres</span><span data-lang="en">2 years, 6 terms</span></b> · <span data-lang="fr">diplôme DAFD</span><span data-lang="en">DAFD diploma</span></span>
       <span><b><span data-lang="fr">Paiement par trimestre</span><span data-lang="en">Pay per term</span></b> · <span data-lang="fr">plan de paiement remis à l'école</span><span data-lang="en">payment plan given at the school</span></span>
+    </div>
+
+    <!-- Cours de vacances -->
+    <div class="vacances rv" id="vacances">
+      <div>
+        <span class="badge"><span data-lang="fr">Bientôt</span><span data-lang="en">Coming soon</span></span>
+        <h3><span data-lang="fr">Des vacances <em>utiles</em>, de ses propres mains.</span><span data-lang="en">A holiday that <em>builds</em> something.</span></h3>
+        <p><span data-lang="fr">Pendant les grandes vacances, l'académie ouvre ses ateliers aux enfants et aux jeunes. Au lieu de passer les journées devant un écran, ils apprennent à prendre des mesures, à couper et à coudre sur une vraie machine, encadrés par nos formateurs.</span><span data-lang="en">During the long school holidays, the academy opens its workshops to children and young people. Instead of spending their days in front of a screen, they learn to take measurements, cut fabric and sew on a real machine, guided by our trainers.</span></p>
+        <ul>
+          <li><span data-lang="fr">Une activité qui les occupe et les rend fiers</span><span data-lang="en">An activity that keeps them busy and makes them proud</span></li>
+          <li><span data-lang="fr">Un premier vêtement ou accessoire cousu par eux-mêmes</span><span data-lang="en">A first garment or accessory sewn with their own hands</span></li>
+          <li><span data-lang="fr">Un cadre sûr, sérieux et bienveillant, à Bakau</span><span data-lang="en">A safe, serious and caring setting in Bakau</span></li>
+        </ul>
+        <p style="font-size:14px"><span data-lang="fr">Dates et tarifs annoncés très bientôt. Écrivez-nous dès maintenant pour réserver une place.</span><span data-lang="en">Dates and fees will be announced very soon. Message us now to reserve a place.</span></p>
+        <a class="btn btn-or" href="https://wa.me/2207628683?text=Hello%2C%20I%20am%20interested%20in%20the%20holiday%20classes%20for%20children%20at%20Djamil%20Academy." target="_blank" rel="noopener"><span data-lang="fr">Réserver une place</span><span data-lang="en">Reserve a place</span> <span class="fl">→</span></a>
+      </div>
+      <div>
+        <svg viewBox="0 0 420 340" role="img" aria-label="Illustration : un enfant apprend à coudre sur une machine">
+          <rect x="0" y="0" width="420" height="340" rx="0" fill="#17150f"/>
+          <circle cx="330" cy="70" r="46" fill="#c8973a" opacity=".16"/>
+          <circle cx="70" cy="290" r="70" fill="#c8973a" opacity=".08"/>
+          <!-- table -->
+          <rect x="40" y="250" width="340" height="12" fill="#c8973a"/>
+          <rect x="62" y="262" width="10" height="70" fill="#8a6a2e"/><rect x="348" y="262" width="10" height="70" fill="#8a6a2e"/>
+          <!-- machine -->
+          <path d="M180 250 V180 a22 22 0 0 1 22 -22 H318 a22 22 0 0 1 22 22 V250 Z" fill="#f5f0e8"/>
+          <rect x="196" y="190" width="70" height="60" fill="#17150f"/>
+          <rect x="318" y="166" width="14" height="40" rx="4" fill="#c8973a"/>
+          <circle cx="352" cy="200" r="16" fill="none" stroke="#c8973a" stroke-width="5"/>
+          <rect x="300" y="212" width="6" height="24" fill="#2a2520"/><rect x="292" y="236" width="22" height="5" fill="#2a2520"/>
+          <!-- tissu -->
+          <path d="M220 242 C 250 236, 285 246, 330 238 L 336 252 L 214 252 Z" fill="#e2bd72"/>
+          <path d="M226 247 h96" stroke="#17150f" stroke-width="2" stroke-dasharray="5 5"/>
+          <!-- enfant -->
+          <path d="M120 250 C 118 205, 130 178, 160 172 C 186 168, 200 190, 202 214 L 206 250 Z" fill="#c8973a"/>
+          <path d="M186 206 C 205 214, 222 224, 238 236" stroke="#6b4a2b" stroke-width="13" stroke-linecap="round" fill="none"/>
+          <path d="M160 212 C 190 226, 236 240, 262 240" stroke="#6b4a2b" stroke-width="12" stroke-linecap="round" fill="none"/>
+          <circle cx="158" cy="140" r="30" fill="#6b4a2b"/>
+          <path d="M128 136 C 128 108, 186 104, 188 132 C 176 120, 142 120, 128 136 Z" fill="#17150f"/>
+          <circle cx="172" cy="144" r="3" fill="#17150f"/>
+          <path d="M168 156 q8 5 14 0" stroke="#17150f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- mètre ruban -->
+          <path d="M126 196 C 140 214, 172 222, 196 218" stroke="#f5f0e8" stroke-width="5" fill="none"/>
+          <!-- étoiles -->
+          <path d="M60 70 l6 14 14 6 -14 6 -6 14 -6 -14 -14 -6 14 -6z" fill="#e2bd72"/>
+          <path d="M380 140 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="#e2bd72" opacity=".8"/>
+        </svg>
+      </div>
     </div>
     <!-- Frais de scolarité -->
     <div class="eyebrow rv" id="frais" style="margin-top:56px"><span data-lang="fr">Frais de scolarité</span><span data-lang="en">Tuition &amp; fees</span></div>
