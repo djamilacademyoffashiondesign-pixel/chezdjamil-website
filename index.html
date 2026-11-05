@@ -466,7 +466,7 @@ footer a:hover{color:var(--or)}
   <div class="wrap">
     <div class="deux">
       <div>
-        <div class="eyebrow rv">DAFD Académie · Rég. 2023/C22040</div>
+        <div class="eyebrow rv"><span data-lang="fr">DAFD Académie · Rég. 2023/C22040</span><span data-lang="en">DAFD Academy · Reg. 2023/C22040</span></div>
         <h2 class="rv d1"><span data-lang="fr">Apprendre un métier, <em>de ses propres mains.</em></span><span data-lang="en">Learn a trade, <em>with your own hands.</em></span></h2>
         <p class="lead rv d2"><span data-lang="fr">La Djamil Academy of Fashion Design est une école professionnelle agréée en Gambie. En deux ans, l'élève apprend à mesurer, tracer un patron, couper et coudre un vrai vêtement, puis à en vivre. Aucun niveau scolaire n'est exigé : seulement la passion et la patience.</span><span data-lang="en">The Djamil Academy of Fashion Design is an accredited vocational school in The Gambia. Over two years, students learn to measure, draft a pattern, cut and sew a real garment, and then to earn a living from it. No school level is required: only passion and patience.</span></p>
         <div class="disciplines rv d3">
@@ -856,7 +856,7 @@ footer a:hover{color:var(--or)}
       <div class="fg"><label><span data-lang="fr">Classe souhaitée *</span><span data-lang="en">Preferred class *</span></label>
         <select id="f-formation">
           <option value="" data-fr="Choisir…" data-en="Select…">Choisir…</option>
-          <option data-fr="1re année — classe du matin (lun–jeu, 9h–14h)" data-en="Year 1 — morning class (Mon–Thu, 9am–2pm)">1re année — classe du matin (lun–jeu, 9h–14h)</option>
+          <option data-fr="Classe du matin (lun–jeu, 9h–14h) — complète : seulement si vous cousez déjà" data-en="Morning class (Mon–Thu, 9am–2pm) — full: only if you already sew">Classe du matin (lun–jeu, 9h–14h) — complète : seulement si vous cousez déjà</option>
           <option data-fr="1re année — classe de l'après-midi (lun–jeu, 15h30–18h30)" data-en="Year 1 — afternoon class (Mon–Thu, 3:30–6:30pm)">1re année — classe de l'après-midi (lun–jeu, 15h30–18h30)</option>
           <option data-fr="1re année — classe du week-end (ven–sam, 9h–16h)" data-en="Year 1 — weekend class (Fri–Sat, 9am–4pm)">1re année — classe du week-end (ven–sam, 9h–16h)</option>
           <option data-fr="Entrée directe en 2e année — je couds déjà (test de niveau)" data-en="Direct entry to Year 2 — I already sew (level test)">Entrée directe en 2e année — je couds déjà (test de niveau)</option>
@@ -1006,11 +1006,15 @@ function soumettreInscription(){
   if(mineur&&(!parentPrenom||!parentNom||!parentRelation||!parentTel))manque=true;
   if(manque)return erreur(en?'Please fill in all fields marked with *'+(mineur?' (and the parent section, as you are under 18).':'.'):'Merci de remplir tous les champs marqués d’un *'+(mineur?' (et la partie parent, car vous avez moins de 18 ans).':'.'));
   err.style.display='none';
-  var msg='*NOUVELLE INSCRIPTION — DAFD ACADÉMIE*\nRég. 2023/C22040\n\n'+
-    '*CANDIDAT*\nNom : '+prenom+' '+nom+'\nÂge : '+age+' ans'+(sexe?' ('+sexe+')':'')+'\nTéléphone : '+tel+'\n'+(email?'Email : '+email+'\n':'')+'Classe : '+formation+'\n\n'+
-    ((parentPrenom||parentNom||parentTel)?'*PARENT / TUTEUR*\nNom : '+parentPrenom+' '+parentNom+'\nLien : '+(parentRelation||'-')+'\nTéléphone : '+(parentTel||'-')+'\n'+(parentEmail?'Email : '+parentEmail+'\n':'')+'\n':'')+
-    "*CONTACT D'URGENCE*\nNom : "+ePrenom+' '+eNom+'\nLien : '+eRel+'\nTéléphone : '+eTel+'\nQui paie : '+payeur+'\n\n'+
-    '*PARCOURS*\nNiveau en couture : '+(niveau||'Non précisé')+'\nLa couture sera : '+projet+'\nSa propre décision : '+decision+'\nMotivation : '+motivation;
+  /* Le message suit la langue choisie par le candidat : titres et réponses dans la même langue. */
+  var L=en?{t:'NEW REGISTRATION — DAFD ACADEMIE',reg:'Reg.',cand:'APPLICANT',nom:'Name',age:'Age',ans:'years old',tel:'Phone',email:'Email',cls:'Class',par:'PARENT / GUARDIAN',lien:'Relationship',urg:'EMERGENCY CONTACT',paie:'Who pays',parc:'BACKGROUND',niv:'Sewing level',nivNo:'Not specified',proj:'Sewing will be',dec:'Own decision',mot:'Motivation',sep:': '}
+          :{t:'NOUVELLE INSCRIPTION — DAFD ACADÉMIE',reg:'Rég.',cand:'CANDIDAT',nom:'Nom',age:'Âge',ans:'ans',tel:'Téléphone',email:'Email',cls:'Classe',par:'PARENT / TUTEUR',lien:'Lien',urg:"CONTACT D'URGENCE",paie:'Qui paie',parc:'PARCOURS',niv:'Niveau en couture',nivNo:'Non précisé',proj:'La couture sera',dec:'Sa propre décision',mot:'Motivation',sep:' : '};
+  function ln(k,val){return L[k]+L.sep+val+'\n'}
+  var msg='*'+L.t+'*\n'+L.reg+' 2023/C22040\n\n'+
+    '*'+L.cand+'*\n'+ln('nom',prenom+' '+nom)+ln('age',age+' '+L.ans+(sexe?' ('+sexe+')':''))+ln('tel',tel)+(email?ln('email',email):'')+ln('cls',formation)+'\n'+
+    ((parentPrenom||parentNom||parentTel)?'*'+L.par+'*\n'+ln('nom',parentPrenom+' '+parentNom)+ln('lien',parentRelation||'-')+ln('tel',parentTel||'-')+(parentEmail?ln('email',parentEmail):'')+'\n':'')+
+    '*'+L.urg+'*\n'+ln('nom',ePrenom+' '+eNom)+ln('lien',eRel)+ln('tel',eTel)+ln('paie',payeur)+'\n'+
+    '*'+L.parc+'*\n'+ln('niv',niveau||L.nivNo)+ln('proj',projet)+ln('dec',decision)+L.mot+L.sep+motivation;
   var lien=WA+encodeURIComponent(msg);
   document.getElementById('waInscription').href=lien;
   var ok=document.getElementById('successMsg');ok.style.display='block';ok.scrollIntoView({behavior:'smooth',block:'center'});
