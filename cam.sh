@@ -11,7 +11,7 @@ if ! command -v ffmpeg >/dev/null 2>&1; then
   exit 1
 fi
 
-if [ ! -f "$CONF" ]; then
+if true; then
   echo ""
   echo "=== Réglage des caméras Chez Djamil ==="
   read -r -p "Nom d'utilisateur de l'enregistreur [admin] : " U </dev/tty
